@@ -1,0 +1,138 @@
+with TopoClass;
+with Ada.Text_IO;
+use Ada.Text_IO;
+with Ada.Integer_Text_IO;
+use Ada.Integer_Text_IO;
+with Ada.Strings.Unbounded;
+use Ada.Strings.Unbounded;
+with Ada.Strings.Unbounded.Text_IO;
+use Ada.Strings.Unbounded.Text_IO;
+
+procedure TopoClassTest is
+
+   type MyType is
+         (Nothing,
+          Garza,
+          Taylor,
+          Funk,
+          Sido,
+          Dedear,
+          Rocha,
+          McLeod,
+          Reioux,
+          Davies);
+
+   package MyTypeIO is new Ada.Text_IO.Enumeration_IO(MyType);
+
+   procedure IntPut (
+         Thing : in     Integer) is
+   begin
+      Put(Thing, 2);
+   end;
+
+   procedure MyTypePut (
+         Thing : in     MyType) is
+   begin
+      MyTypeIO.Put(Thing);
+   end;
+
+   package IntTopo is new TopoClass(Integer, IntPut);
+   package NameTopo is new TopoClass(MyType, MyTypePut);
+
+   procedure ParseInts (
+         Topo : in out IntTopo.Topological_Sort;
+         Text : in     Unbounded_String) is
+      Index  : Integer                     := 1;
+      Input  : String (1 .. Length (Text)) := To_String (Text);
+   begin
+      while Index <= Input'Last and then Input(Index) /= '<' loop
+         Index := Index + 1;
+      end loop;
+      if Index > Input'Last then
+         Put_Line("Invalid format: Could not parse.");
+         return;
+      end if;
+      IntTopo.AddPartialOrder(Topo, Integer'Value(Input(1..Index - 1)), Integer'Value(Input(Index + 1..Input'Last)));
+      Put("Added action -");
+      Put(Integer'Value(Input(1..Index - 1)), 2);
+      Put("- before action -");
+      Put(Integer'Value(Input(Index + 1..Input'Last)), 2);
+      Put_Line("-.");
+   exception
+      when Constraint_Error =>
+         put_line("Invalid format: one or both values are not acceptable.");
+   end ParseInts;
+
+   procedure ParseNames (
+         Topo : in out NameTopo.Topological_Sort;
+         Text : in     Unbounded_String) is
+      Index      : Integer                     := 1;
+      Input      : String (1 .. Length (Text)) := To_String (Text);
+   begin
+      while Index <= Input'Last and then Input(Index) /= '<' loop
+         Index := Index + 1;
+      end loop;
+      if Index > Input'Last then
+         Put_Line("Invalid format: Could not parse.");
+         return;
+      end if;
+      NameTopo.AddPartialOrder(Topo, MyType'Value(Input(1..Index - 1)), MyType'Value(Input(Index + 1..Input'Last)));
+      Put("Added action -");
+      MyTypePut(MyType'Value(Input(1..Index - 1)));
+      Put("- before action -");
+      MyTypePut(MyType'Value(Input(Index + 1..Input'Last)));
+      Put_Line("-.");
+   exception
+      when Constraint_Error =>
+         put_line("Invalid format: one or both values are not acceptable.");
+   end ParseNames;
+
+   Input : Unbounded_String;
+
+
+begin
+   loop
+      put_line("integer or names? ");
+      Input := Get_Line;
+      if Input = "integer" then
+         Put_line("Enter Number of Actions: ");
+         Input := Get_Line;
+         declare
+            IntTest : IntTopo.Topological_Sort := IntTopo.GenerateTopo(Integer'Value(To_String(Input)));
+         begin
+            loop
+               Input := Get_Line;
+               if Input = "print" then
+                  IntTopo.PrintTopo(IntTest);
+               elsif Input = "sort" then
+                  IntTopo.TopologicalSort(IntTest);
+               elsif Input = "exit" then
+                  exit;
+               else
+                  ParseInts(IntTest, Input);
+               end if;
+            end loop;
+         end;
+      elsif Input = "names" then
+         declare
+            NameTest : NameTopo.Topological_Sort := NameTopo.GenerateTopo(9);
+         begin
+            loop
+               Input := Get_Line;
+               if Input = "print" then
+                  NameTopo.PrintTopo(NameTest);
+               elsif Input = "sort" then
+                  NameTopo.TopologicalSort(NameTest);
+               elsif Input = "exit" then
+                  exit;
+               else
+                  ParseNames(NameTest, Input);
+               end if;
+            end loop;
+         end;
+
+      elsif Input = "done" then
+         exit;
+      end if;
+   end loop;
+end TopoClassTest;

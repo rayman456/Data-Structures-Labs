@@ -1,0 +1,50 @@
+Enter a Stack Type (C/I/D): Enter a Stack Size: Successfully allocated a character stack of size 20.
+Type a stream of characters followed by spaces to insert.
+Type 'pop;' to pop a stream of characters. Type 'exit;' to exit.
+Inserted -Joe- into the stack. Current size is now  4.
+Inserted -moT- into the stack. Current size is now  8.
+Inserted -Betty- into the stack. Current size is now 14.
+Pop results:  5ytteB
+Pop results:  3Tom
+Pop results:  3eoJ
+Nothing to pop!
+Inserted -Larry- into the stack. Current size is now  6.
+Inserted -Sarah- into the stack. Current size is now 12.
+Inserted -Bob- into the stack. Current size is now 16.
+Pop results:  3boB
+Inserted -Harold- into the stack. Current size is now 19.
+No space left in Stack, could not insert!
+Enter a Stack Type (C/I/D): Enter a Stack Size: Successfully allocated an integer stack of size 15.
+Enter a stream of integers separated by spaces.
+The last integer must be '0' followed by ';'.
+Type 'pop;' to pop a stream of integers. Type 'exit;' to exit.
+Inserted  4 integers into the stack. Size is now  5.
+Pop results:    4  46   3  25  10
+Inserted  5 integers into the stack. Size is now  6.
+Inserted  2 integers into the stack. Size is now  9.
+Inserted  1 integers into the stack. Size is now 11.
+Inserted  3 integers into the stack. Size is now 15.
+Pop results:    3  67  23  42
+Pop results:    1   3
+No space left in stack, could not insert!
+Enter a Stack Type (C/I/D): Enter a Stack Size: Successfully allocated a date stack of size  8.
+Enter a stream of dates separated by spaces in the following format:
+Month Day Year
+The last word in the stream must be 'end' followed by ';'.
+Type 'pop;' to pop a stream of dates. Type 'exit;' to exit;
+Inserted  3 Dates into the stack. Size is now  4.
+Inserted  1 Dates into the stack. Size is now  6.
+No space left in stack, could not insert!
+ 1 Dates:
+OCTOBER 12, 2003
+ 3 Dates:
+SEPTEMBER  1, 2004
+FEBRUARY 23, 1492
+JANUARY 15, 1952
+Nothing to pop!
+Nothing to pop!
+Inserted  2 Dates into the stack. Size is now  3.
+ 2 Dates:
+AUGUST 11, 2002
+SEPTEMBER 17, 1623
+Enter a Stack Type (C/I/D): 

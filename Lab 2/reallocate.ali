@@ -1,0 +1,54 @@
+V "GNAT Lib v3.13 "
+P
+R nnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U reallocate%b		reallocate.adb		09AAF415 SU GE
+
+U reallocate%s		reallocate.ads		6452C07F NE GE
+
+D reallocate.ads	20131025013646 6452C07F
+D reallocate.adb	20131025003650 6DF8346A
+X 1 reallocate.ads
+3+9*ITEM 2|9r30 1|5r51 23r33
+5A9*ITEM_ARRAY 2|5r30 1|12r30 19r33
+7A9*INT_ARRAY 10r30 11r30 13r30 2|2r30 4r30 1|16r33 17r33 18r33 2|3r30
+9U19*MoveStacks 2|55r4
+10a10 Base
+11a10 Top
+12a10 StackSpace
+13a10 NewBase
+15G14*Reallocate 2|1b11
+16a10*Top 2|11r32 24r35 25r10 26r25 36r7 36r24 38r23 40r7 40r24 50r37 53r4
+. 53r21 55m21 57r4 57r21 58r15 60r20
+17a10*OldTop 2|25r19 26r10 26r34 27r33 29r10 38r10 46r4 49r37 50r7 50r20
+. 55r38 60r7
+18a10*Base 2|21r18 21r30 24r44 33r35 33r47 46r17 50r50 55m15
+19a10*StackSpace 2|55m26 58r4
+20f10*MinimumSpace 2|33r58
+21f10*EqualAllocate 2|43r28 44r14
+22i10*StackNum 2|36r11 36r28 40r11 40r28 53r8 53r25 57r8 57r25 58r19
+23+10*Thing 2|58r33
+24e10*Successful 2|35m7 62m4
+X 2 reallocate.adb
+2a7 Top
+3a7 OldTop
+4a7 Base
+5a7 StackSpace
+6f7 MinimumSpace
+7f7 EqualAllocate
+8i7 StackNum
+9+7 Thing
+10e7 Successful
+11i4 N 14r32 21r23 33r40 37r19 44r57 48r16 59r16
+12i4 AvailSpace 21m4 24m7 24r21 33r13 44r36 45r36
+13i4 Totallnc 22m4 27m10 27r22 45r57
+14i4 J 23r10 24r39 24r49 25r14 25r26 26r17 26r29 26r41 27r40 29r17 31m7 31r12
+15f4 GrowthAllocate 43m4 45r13
+16f4 Alpha 44m4 49r22
+17f4 Beta 45m4 49r50
+18f4 Tau 49m7 50r85 51r16
+19f4 Sigma 47m4 49r14 50r113 51m7
+37i11 X 38r17 38r27
+48i8 I 49r44 50r14 50r27 50r41 50r55
+59i8 X 60r14 60r24
+

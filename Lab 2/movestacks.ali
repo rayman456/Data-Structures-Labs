@@ -1,0 +1,31 @@
+V "GNAT Lib v3.13 "
+P
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U movestacks%b		movestacks.adb		59707B62 SU GE
+
+U movestacks%s		movestacks.ads		630474DF NE GE
+
+D movestacks.ads	20131025013542 630474DF
+D movestacks.adb	20131025013554 3A740FBD
+X 1 movestacks.ads
+3+9*ITEM 5r51
+5A9*ITEM_ARRAY 12r30 2|4r27
+7A9*INT_ARRAY 2|2r27 3r27 1|11r30 2|5r27 1|10r30 13r30
+9G14*MoveStacks 2|1b11
+10a10*Base 2|10r23 11r19 12r20 15r10 20r23 21r31 22r28 25r10
+11a10*Top 2|7r22 12r33 16r10 16r20 22r42 26r10 26r20
+12a10*StackSpace 2|13r13 13r37 23r13 23r37
+13a10*NewBase 2|10r10 11r29 15r21 20r10 21r18 25r21
+X 2 movestacks.adb
+2a7 Base
+3a7 Top
+4a7 StackSpace
+5a7 NewBase
+6i4 Delt 11m10 13r28 16r29 21m10 23r28 26r29
+7i4 N 9r16 19r24
+9i8 H 10r18 10r28 11r24 11r37 12r25 12r37 15r15 15r29 16r14 16r24
+12i14 L 13r24 13r48
+19i8 H 20r18 20r28 21r26 21r36 22r33 22r46 25r15 25r29 26r14 26r24
+22i14 L 23r24 23r48
+

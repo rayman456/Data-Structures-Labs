@@ -1,0 +1,23 @@
+generic
+
+   type ITEM is private;
+
+   Size : Positive;
+
+package GStack is
+
+   procedure Push (
+         Stuff : in     ITEM);
+
+   procedure Pop (
+         Stuff :    out ITEM);
+
+   function Is_Empty return BOOLEAN;
+
+   function Is_Full return BOOLEAN;
+
+   function Current_Size return NATURAL;
+
+   function Total_Size return POSITIVE;
+
+end GStack;

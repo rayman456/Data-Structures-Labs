@@ -1,0 +1,108 @@
+integer or names? 
+Enter Number of Actions: 
+Partial Order: Action1 < Action2 (Action1 comes before Action2).
+Enter number of Partial Orders: 
+Action1: Action2: Added  3 before  4.
+Action1: Action2: Added  3 before  4.
+Action1: Action2: Added 11 before  9.
+Action1: Action2: Added  6 before  1.
+Action1: Action2: Added  8 before  7.
+Action1: Action2: Added 10 before  9.
+Action1: Action2: Added  8 before  3.
+Action1: Action2: Added  6 before  7.
+Action1: Action2: Added  8 before 10.
+Action1: Action2: Added  2 before  3.
+Action1: Action2: Added  5 before  4.
+Action1: Action2: Added  2 before  7.
+Action1: Action2: Added  5 before  1.
+Action1: Action2: Added  6 before  9.
+Action1: Action2: Added 11 before  1.
+Action1: Action2: Added  5 before  6.
+Perform action  2
+Perform action  5
+Perform action  8
+Perform action 11
+Perform action  6
+Perform action 10
+Perform action  3
+Perform action  7
+Perform action  1
+Perform action  9
+Perform action  4
+Successful Sort!
+integer or names? 
+Enter Number of Actions: 
+Partial Order: Action1 < Action2 (Action1 comes before Action2).
+Enter number of Partial Orders: 
+Action1: Action2: Added 11 before  1.
+Action1: Action2: Added  6 before  1.
+Action1: Action2: Added  8 before  7.
+Action1: Action2: Added 10 before  9.
+Action1: Action2: Added  6 before  9.
+Action1: Action2: Added  3 before  4.
+Action1: Action2: Added  6 before  7.
+Action1: Action2: Added  8 before 10.
+Action1: Action2: Added  2 before  3.
+Action1: Action2: Added  5 before  4.
+Action1: Action2: Added  8 before  3.
+Action1: Action2: Added  2 before  7.
+Action1: Action2: Added  5 before  1.
+Action1: Action2: Added  5 before  6.
+Action1: Action2: Added  4 before  8.
+Action1: Action2: Added  3 before  5.
+Action1: Action2: Added  2 before  5.
+Action1: Action2: Added 11 before  9.
+Action1: Action2: Added  1 before  6.
+Action1: Action2: Added  1 before  2.
+Perform action 11
+Error!
+Loop Found:  1 ->  5 ->  2 ->  1
+integer or names? 
+Enter Number of Actions: 
+Partial Order: Action1 < Action2 (Action1 comes before Action2).
+Enter number of Partial Orders: 
+Action1: Action2: Added GARZA before TAYLOR.
+Action1: Action2: Added FUNK before TAYLOR.
+Action1: Action2: Added SIDO before DEDEAR.
+Action1: Action2: Added ROCHA before MCLEOD.
+Action1: Action2: Added MCLEOD before DEDEAR.
+Action1: Action2: Added TAYLOR before SIDO.
+Action1: Action2: Added FUNK before SIDO.
+Action1: Action2: Added REIOUX before DEDEAR.
+Action1: Action2: Added DAVIES before FUNK.
+Action1: Action2: Added FUNK before DEDEAR.
+Action1: Action2: Added FUNK before TAYLOR.
+Perform action GARZA
+Perform action ROCHA
+Perform action REIOUX
+Perform action DAVIES
+Perform action MCLEOD
+Perform action FUNK
+Perform action TAYLOR
+Perform action SIDO
+Perform action DEDEAR
+Successful Sort!
+integer or names? 
+Enter Number of Actions: 
+Partial Order: Action1 < Action2 (Action1 comes before Action2).
+Enter number of Partial Orders: 
+Action1: Action2: Added GARZA before TAYLOR.
+Action1: Action2: Added FUNK before TAYLOR.
+Action1: Action2: Added SIDO before DEDEAR.
+Action1: Action2: Added ROCHA before MCLEOD.
+Action1: Action2: Added MCLEOD before DEDEAR.
+Action1: Action2: Added TAYLOR before SIDO.
+Action1: Action2: Added FUNK before SIDO.
+Action1: Action2: Added REIOUX before DEDEAR.
+Action1: Action2: Added DAVIES before FUNK.
+Action1: Action2: Added FUNK before DEDEAR.
+Action1: Action2: Added FUNK before TAYLOR.
+Action1: Action2: Added DEDEAR before FUNK.
+Perform action GARZA
+Perform action ROCHA
+Perform action REIOUX
+Perform action DAVIES
+Perform action MCLEOD
+Error!
+Loop Found: FUNK -> DEDEAR -> FUNK
+integer or names? 

@@ -1,0 +1,75 @@
+package body HashTable128 is
+
+   function GetAddress128 (
+         RA : in     RandomAddress128)
+     return Long_Integer is
+   begin
+      return RA.Address / 4;
+   end GetAddress128;
+
+   procedure NextAddress128 (
+         RA : in out RandomAddress128) is
+   begin
+      RA.Address := RA.Address * 5;
+      RA.Address := RA.Address mod 512;
+   end NextAddress128;
+
+   procedure SetupHashTable (
+         HashTable           : in out HashTable128'Class;
+         Default_Table_Value : in     ITEM) is
+   begin
+      HashTable.Empty := Default_Table_Value;
+      HashTable.Table := (others => Default_Table_Value);
+   end SetupHashTable;
+
+   procedure InsertLinearProbe (
+         HashTable    : in out LinearHashTable128;
+         Key          : in     ITEM;
+         Percent_Full :    out Float) is
+      Address : Long_Integer;
+   begin
+      Address := GetHash(Key);
+      if HashTable.Table(Address) = HashTable.Empty then
+         HashTable.Table(Address) := Key;
+      else
+         --Handle Collision
+         Address := (Address + 1) mod 128;
+         if Address = 0 then
+            Address := 128;
+         end if;
+         while HashTable.Table(Address) /= HashTable.Empty loop
+
+
+   end InsertLinearProbe;
+
+   procedure InsertRandomProbe (
+         HashTable    : in out RandomHashTable128;
+         Key          : in     ITEM;
+         Percent_Full :    out Float) is
+   begin
+      null;
+   end InsertRandomProbe;
+
+   procedure SearchLinearProbe (
+         HashTable        : in out LinearHashTable128;
+         Key              : in     ITEM;
+         Number_Of_Probes :    out Integer) is
+   begin
+      null;
+   end SearchLinearProbe;
+
+   procedure SearchRandomProbe (
+         HashTable        : in out RandomHashTable128;
+         Key              : in     ITEM;
+         Number_Of_Probes :    out Integer) is
+   begin
+      null;
+   end SearchRandomProbe;
+
+   procedure PrintTable (
+         Table : in     HashTable128'Class) is
+   begin
+      null;
+   end PrintTable;
+
+end HashTable128;

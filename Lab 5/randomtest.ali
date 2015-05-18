@@ -1,0 +1,63 @@
+V "GNAT Lib v3.13 "
+M P W=b
+P
+R nnvnnnnvnnnnvvvvvvvvvnnnnnnnnnvnnnnnnnnnnnn
+
+U randomtest%b		randomtest.adb		5A25C76F NE SU IU
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+
+D ada.ads		19941113090442 2359F9ED
+D a-except.ads		20000206185838 287FCF69
+D a-finali.ads		19971119203818 3F32DEEF
+D a-filico.ads		19970305075844 1DECB9AC
+D a-ioexce.ads		19941113122010 175CB67B
+D a-stream.ads		19971119203846 5F7C277B
+D a-tags.ads		19980811033500 45EF7E4E
+D a-textio.ads		20000206185936 2D24B708
+D a-tiinau.ads		19971119203948 77D9AFB5
+D a-tiinio.ads		19971119203950 284C234E
+D a-tiinio.adb		19991128210656 7EB0AF4F
+D interfac.ads		19990427093020 0357E00A
+D i-cstrea.ads		19991223203434 70A316EF
+D randomtest.adb	20131202235234 77017067
+D system.ads		20000127071654 4379A8A7
+D s-exctab.ads		19990919155914 7A25F5F9
+D s-ficobl.ads		19990213003920 0C03FD47
+D s-finimp.ads		19980221064008 1C201C0F
+D s-finroo.ads		19960922045928 166D4EDA
+D s-parame.ads		20000204223622 25FE086A
+D s-secsta.ads		19990723202132 60A2A5CD
+D s-soflin.ads		19991222144230 006B24D7
+D s-stache.ads		19990409181030 42B57F2A
+D s-stalib.ads		20000204223632 438B3864
+D s-stoele.ads		19980907200904 131D4539
+D s-stratt.ads		19981014065624 1761725B
+D s-unstyp.ads		19990702055612 78AFB91D
+D unchconv.ads		19960730084842 72DC4539
+X 1 ada.ads
+18U9*Ada 14|1r6 1r23 25r25
+X 8 a-textio.ads
+51U13*Text_IO 14|1r10 1r27 25r29
+169U14*New_Line 14|33r63 37r35
+245U14*Put 14|33r4
+260U14*Put_Line 14|34r4
+X 10 a-tiinio.ads
+49G21*Integer_IO 14|25r37
+69U14 Put 14|33r32 37r7
+X 14 randomtest.adb
+3U11*RandomTest
+5R9 RandomAddress128 12r22 19r22 29r13
+6i11 Initial_Address 8r38
+8i10 Address 15r18 21r10 21r24 22r10 22r24
+11U13 GetAddress128 33r36 36r10 37r11
+12r10 RA 15r15
+18U14 NextAddress128 35r4 38r7
+19r10 RA 21r7 21m10 21r21 22r7 22m10 22r21
+25U12 LIIO 26r8
+28i4 Start 29r30 36r35
+29r4 Random 33r50 35m19 36r24 37r25 38m22
+

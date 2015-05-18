@@ -1,0 +1,391 @@
+Enter a stack type (Names/Dates): 
+Enter the start of memory: 
+Enter the end of memory: 
+Enter the front of the stack list: 
+Enter the rear of the stack list: 
+Enter number of stacks: 
+Inserted -LEE- into stack  1.
+Inserted -RIOS- into stack  1.
+Pop Results for stack  1: RIOS
+Inserted -CARAZO- into stack  1.
+Inserted -HODGES- into stack  1.
+Inserted -PATIL- into stack  3.
+Inserted -GARZA- into stack  2.
+Inserted -MORGAN- into stack  3.
+Nothing to pop!
+Inserted -MCLEOD- into stack  4.
+Inserted -YAGER- into stack  4.
+Pop Results for stack  3: MORGAN
+Pop Results for stack  4: YAGER
+
+OVERFLOW IN STACK  1!
+Base [ 2,  5,  9, 13, 17]
+Top [ 5,  6, 10, 14]
+OldTop [ 2,  5,  9, 13]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES]
+Stack  2 [ 6: GARZA]
+Stack  3 [10: PATIL]
+Stack  4 [14: MCLEOD]
+REALLOCATING...
+Base [ 2, 10, 12, 14, 17]
+Top [ 6, 11, 13, 15]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS]
+Stack  2 [11: GARZA]
+Stack  3 [13: PATIL]
+Stack  4 [15: MCLEOD]
+
+Inserted -WILLS- into stack  1.
+Inserted -ASSI- into stack  3.
+Inserted -YAGER- into stack  1.
+Inserted -HALL- into stack  1.
+Inserted -HODGES- into stack  4.
+Inserted -RIOS- into stack  1.
+Inserted -LEE- into stack  1.
+
+OVERFLOW IN STACK  1!
+Base [ 2, 10, 12, 14, 17]
+Top [10, 11, 14, 16]
+OldTop [ 6, 11, 13, 15]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL,  9: RIOS, 10: LEE]
+Stack  2 [11: GARZA]
+Stack  3 [13: PATIL, 14: ASSI]
+Stack  4 [15: MCLEOD, 16: HODGES]
+REALLOCATING...
+Base [ 2, 11, 12, 14, 17]
+Top [11, 12, 14, 16]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL,  9: RIOS, 10: LEE, 11: ASSI]
+Stack  2 [12: GARZA]
+Stack  3 [13: PATIL, 14: ASSI]
+Stack  4 [15: MCLEOD, 16: HODGES]
+
+Inserted -ASSI- into stack  1.
+Pop Results for stack  1: ASSI
+Pop Results for stack  1: LEE
+Pop Results for stack  1: RIOS
+
+OVERFLOW IN STACK  2!
+Base [ 2, 11, 12, 14, 17]
+Top [ 8, 12, 14, 16]
+OldTop [11, 12, 14, 16]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [12: GARZA]
+Stack  3 [13: PATIL, 14: ASSI]
+Stack  4 [15: MCLEOD, 16: HODGES]
+REALLOCATING...
+Base [ 2,  8, 12, 14, 17]
+Top [ 8, 10, 14, 16]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [13: PATIL, 14: ASSI]
+Stack  4 [15: MCLEOD, 16: HODGES]
+
+Inserted -POKHREL- into stack  2.
+Inserted -SIDO- into stack  4.
+
+OVERFLOW IN STACK  4!
+Base [ 2,  8, 12, 14, 17]
+Top [ 8, 10, 14, 17]
+OldTop [ 8, 10, 14, 16]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [13: PATIL, 14: ASSI]
+Stack  4 [15: MCLEOD, 16: HODGES, 17: SIDO]
+REALLOCATING...
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 16]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO]
+
+Inserted -KEO- into stack  4.
+
+OVERFLOW IN STACK  2!
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 16]
+OldTop [ 8, 10, 12, 16]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO]
+REALLOCATING...
+Could Not Reallocate: Not Enough Space.
+
+>>Failed to insert SODEMANN into stack 2<<
+Inserted -DAVIES- into stack  4.
+
+OVERFLOW IN STACK  4!
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 17]
+OldTop [ 8, 10, 12, 16]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO, 17: DAVIES]
+REALLOCATING...
+Could Not Reallocate: Not Enough Space.
+
+>>Failed to insert HODGES into stack 4<<
+
+OVERFLOW IN STACK  4!
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 17]
+OldTop [ 8, 10, 12, 17]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO, 17: DAVIES]
+REALLOCATING...
+Could Not Reallocate: Not Enough Space.
+
+>>Failed to insert MCLEOD into stack 4<<
+
+OVERFLOW IN STACK  4!
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 17]
+OldTop [ 8, 10, 12, 17]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO, 17: DAVIES]
+REALLOCATING...
+Could Not Reallocate: Not Enough Space.
+
+>>Failed to insert FURBEE into stack 4<<
+
+OVERFLOW IN STACK  4!
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 17]
+OldTop [ 8, 10, 12, 17]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO, 17: DAVIES]
+REALLOCATING...
+Could Not Reallocate: Not Enough Space.
+
+>>Failed to insert GARZA into stack 4<<
+
+OVERFLOW IN STACK  1!
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 17]
+OldTop [ 8, 10, 12, 17]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO, 17: DAVIES]
+REALLOCATING...
+Could Not Reallocate: Not Enough Space.
+
+>>Failed to insert SPARKS into stack 1<<
+
+OVERFLOW IN STACK  1!
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 17]
+OldTop [ 8, 10, 12, 17]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO, 17: DAVIES]
+REALLOCATING...
+Could Not Reallocate: Not Enough Space.
+
+>>Failed to insert VINCIK into stack 1<<
+
+OVERFLOW IN STACK  1!
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 17]
+OldTop [ 8, 10, 12, 17]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO, 17: DAVIES]
+REALLOCATING...
+Could Not Reallocate: Not Enough Space.
+
+>>Failed to insert DEDEAR into stack 1<<
+
+OVERFLOW IN STACK  2!
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 17]
+OldTop [ 8, 10, 12, 17]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO, 17: DAVIES]
+REALLOCATING...
+Could Not Reallocate: Not Enough Space.
+
+>>Failed to insert POKHREL into stack 2<<
+
+OVERFLOW IN STACK  1!
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 17]
+OldTop [ 8, 10, 12, 17]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GARZA, 10: POKHREL]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO, 17: DAVIES]
+REALLOCATING...
+Could Not Reallocate: Not Enough Space.
+
+>>Failed to insert ASSI into stack 1<<
+Pop Results for stack  2: POKHREL
+Pop Results for stack  2: GARZA
+Nothing to pop!
+Inserted -GUO- into stack  2.
+Inserted -ASSI- into stack  2.
+
+OVERFLOW IN STACK  1!
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 17]
+OldTop [ 8, 10, 12, 17]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GUO, 10: ASSI]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO, 17: DAVIES]
+REALLOCATING...
+Could Not Reallocate: Not Enough Space.
+
+>>Failed to insert DOO into stack 1<<
+
+OVERFLOW IN STACK  1!
+Base [ 2,  8, 10, 12, 17]
+Top [ 8, 10, 12, 17]
+OldTop [ 8, 10, 12, 17]
+Stack  1 [ 3: LEE,  4: CARAZO,  5: HODGES,  6: WILLS,  7: YAGER,  8: HALL]
+Stack  2 [ 9: GUO, 10: ASSI]
+Stack  3 [11: PATIL, 12: ASSI]
+Stack  4 [13: MCLEOD, 14: HODGES, 15: SIDO, 16: KEO, 17: DAVIES]
+REALLOCATING...
+Could Not Reallocate: Not Enough Space.
+
+>>Failed to insert BURRIS into stack 1<<
+Enter a stack type (Names/Dates): 
+Enter the start of memory: 
+Enter the end of memory: 
+Enter the front of the stack list: 
+Enter the rear of the stack list: 
+Enter number of stacks: 
+Inserted -LEE- into stack  1.
+Inserted -RIOS- into stack  1.
+Pop Results for stack  1: RIOS
+Inserted -CARAZO- into stack  1.
+Inserted -HODGES- into stack  1.
+Inserted -PATIL- into stack  3.
+Inserted -GARZA- into stack  2.
+Inserted -MORGAN- into stack  3.
+Pop Results for stack  3: MORGAN
+Inserted -WILLS- into stack  1.
+Inserted -ASSI- into stack  3.
+Inserted -YAGER- into stack  1.
+Inserted -HALL- into stack  1.
+Inserted -RIOS- into stack  1.
+Inserted -LEE- into stack  1.
+
+OVERFLOW IN STACK  1!
+Base [15, 23, 31, 39]
+Top [23, 24, 33]
+OldTop [15, 23, 31]
+Stack  1 [16: LEE, 17: CARAZO, 18: HODGES, 19: WILLS, 20: YAGER, 21: HALL, 22: RIOS, 23: LEE]
+Stack  2 [24: GARZA]
+Stack  3 [32: PATIL, 33: ASSI]
+REALLOCATING...
+Base [15, 32, 34, 39]
+Top [24, 33, 36]
+Stack  1 [16: LEE, 17: CARAZO, 18: HODGES, 19: WILLS, 20: YAGER, 21: HALL, 22: RIOS, 23: LEE, 24: ASSI]
+Stack  2 [33: GARZA]
+Stack  3 [35: PATIL, 36: ASSI]
+
+Inserted -ASSI- into stack  1.
+Pop Results for stack  1: ASSI
+Pop Results for stack  1: LEE
+Pop Results for stack  1: RIOS
+Inserted -POKHREL- into stack  2.
+
+OVERFLOW IN STACK  2!
+Base [15, 32, 34, 39]
+Top [21, 34, 36]
+OldTop [24, 33, 36]
+Stack  1 [16: LEE, 17: CARAZO, 18: HODGES, 19: WILLS, 20: YAGER, 21: HALL]
+Stack  2 [33: GARZA, 34: POKHREL]
+Stack  3 [35: PATIL, 36: ASSI]
+REALLOCATING...
+Base [15, 21, 36, 39]
+Top [21, 24, 38]
+Stack  1 [16: LEE, 17: CARAZO, 18: HODGES, 19: WILLS, 20: YAGER, 21: HALL]
+Stack  2 [22: GARZA, 23: POKHREL, 24: SODEMANN]
+Stack  3 [37: PATIL, 38: ASSI]
+
+Inserted -SODEMANN- into stack  2.
+
+OVERFLOW IN STACK  1!
+Base [15, 21, 36, 39]
+Top [21, 24, 38]
+OldTop [21, 24, 38]
+Stack  1 [16: LEE, 17: CARAZO, 18: HODGES, 19: WILLS, 20: YAGER, 21: HALL]
+Stack  2 [22: GARZA, 23: POKHREL, 24: SODEMANN]
+Stack  3 [37: PATIL, 38: ASSI]
+REALLOCATING...
+Base [15, 33, 36, 39]
+Top [22, 36, 38]
+Stack  1 [16: LEE, 17: CARAZO, 18: HODGES, 19: WILLS, 20: YAGER, 21: HALL, 22: SPARKS]
+Stack  2 [34: GARZA, 35: POKHREL, 36: SODEMANN]
+Stack  3 [37: PATIL, 38: ASSI]
+
+Inserted -SPARKS- into stack  1.
+Inserted -VINCIK- into stack  1.
+Inserted -DEDEAR- into stack  1.
+
+OVERFLOW IN STACK  2!
+Base [15, 33, 36, 39]
+Top [24, 36, 38]
+OldTop [22, 36, 38]
+Stack  1 [16: LEE, 17: CARAZO, 18: HODGES, 19: WILLS, 20: YAGER, 21: HALL, 22: SPARKS, 23: VINCIK, 24: DEDEAR]
+Stack  2 [34: GARZA, 35: POKHREL, 36: SODEMANN]
+Stack  3 [37: PATIL, 38: ASSI]
+REALLOCATING...
+Base [15, 29, 36, 39]
+Top [24, 33, 38]
+Stack  1 [16: LEE, 17: CARAZO, 18: HODGES, 19: WILLS, 20: YAGER, 21: HALL, 22: SPARKS, 23: VINCIK, 24: DEDEAR]
+Stack  2 [30: GARZA, 31: POKHREL, 32: SODEMANN, 33: POKHREL]
+Stack  3 [37: PATIL, 38: ASSI]
+
+Inserted -POKHREL- into stack  2.
+Inserted -ASSI- into stack  1.
+Pop Results for stack  2: POKHREL
+Pop Results for stack  2: SODEMANN
+Pop Results for stack  2: POKHREL
+Inserted -GUO- into stack  2.
+Inserted -ASSI- into stack  2.
+Inserted -DOO- into stack  1.
+Inserted -BURRIS- into stack  1.
+Enter a stack type (Names/Dates): 
+Enter the start of memory: 
+Enter the end of memory: 
+Enter the front of the stack list: 
+Enter the rear of the stack list: 
+Enter number of stacks: 
+Inserted -JANUARY 15, 1956- into stack  2.
+Inserted -FEBRUARY 14, 1947- into stack  2.
+Inserted -OCTOBER 16, 1986- into stack  3.
+Inserted -SEPTEMBER 17, 1842- into stack  2.
+Inserted -DECEMBER 24, 1996- into stack  1.
+Pop Results for stack  3: OCTOBER 16, 1986
+Pop Results for stack  1: DECEMBER 24, 1996
+Inserted -MARCH 16, 1992- into stack  3.
+Pop Results for stack  3: MARCH 16, 1992
+Nothing to pop!
+Inserted -JANUARY 15, 1956- into stack  2.
+Inserted -APRIL 14, 1492- into stack  3.
+Inserted -NOVEMBER  7, 1776- into stack  3.
+Inserted -JUNE 12, 1994- into stack  3.
+Inserted -JULY  4, 1776- into stack  2.
+Inserted -JANUARY 15, 2012- into stack  2.
+Inserted -DECEMBER  6, 1991- into stack  3.
+Inserted -MARCH  5, 1886- into stack  3.
+Inserted -OCTOBER 24, 1996- into stack  1.
+Inserted -NOVEMBER 23, 1996- into stack  1.
+Inserted -NOVEMBER  2, 1990- into stack  1.
+Inserted -SEPTEMBER 14, 1998- into stack  3.
+Enter a stack type (Names/Dates): 

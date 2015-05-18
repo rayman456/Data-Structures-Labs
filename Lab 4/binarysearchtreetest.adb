@@ -1,0 +1,233 @@
+with Ada.Text_IO;
+use Ada.Text_IO;
+with Ada.Strings.Fixed;
+use Ada.Strings.Fixed;
+with Ada.Strings.Maps.Constants;
+use Ada.Strings.Maps.Constants;
+with BinarySearchTree;
+
+procedure BinarySearchTreeTest is
+
+   type String10 is new String
+         (1 .. 10);
+   type Customer is
+      record
+         Name        : String10;
+         PhoneNumber : String10;
+      end record;
+
+   function "<" (
+         TheKey  : in     String10;
+         ARecord : in     Customer)
+     return Boolean is
+   begin
+      return Translate(String(TheKey), Ada.Strings.Maps.Constants.Lower_Case_Map) < Translate(String(ARecord.Name), Ada.Strings.Maps.Constants.Lower_Case_Map);
+   end;
+
+   function ">" (
+         TheKey  : in     String10;
+         ARecord : in     Customer)
+     return Boolean is
+   begin
+      return Translate(String(TheKey), Ada.Strings.Maps.Constants.Lower_Case_Map) > Translate(String(ARecord.Name), Ada.Strings.Maps.Constants.Lower_Case_Map);
+   end;
+
+   function "=" (
+         TheKey  : in     String10;
+         ARecord : in     Customer)
+     return Boolean is
+   begin
+      return Translate(String(TheKey), Ada.Strings.Maps.Constants.Lower_Case_Map) = Translate(String(ARecord.Name), Ada.Strings.Maps.Constants.Lower_Case_Map);
+   end;
+
+   function GetName (
+         ARecord : in     Customer)
+     return String10 is
+   begin
+      return ARecord.Name;
+   end;
+
+   function GetPhone (
+         ARecord : in     Customer)
+     return String10 is
+   begin
+      return ARecord.PhoneNumber;
+   end;
+
+   function NewCustomer (
+         NewName  : in     String10;
+         NewPhone : in     String10)
+     return Customer is
+   begin
+      return (
+         Name        => NewName,
+         PhoneNumber => NewPhone);
+   end;
+
+   procedure PutString10 (
+         Input : in     String10) is
+   begin
+      Put(String(Input));
+   end PutString10;
+
+   package MySearchTree is new BinarySearchTree(String10, Customer, "<", ">", "=", GetName, GetPhone, NewCustomer, PutString10);
+   use MySearchTree;
+
+   procedure Insert (
+         Tree  : in out BinarySearchTreePoint;
+         Name  : in     String10;
+         Phone : in     String10) is
+   begin
+      MySearchTree.InsertBinarySearchTree(Tree, Name, Phone);
+      Put("Inserted [");
+      Put(String(Name));
+      Put(",");
+      Put(String(Phone));
+      Put_Line("]");
+   end Insert;
+
+   TestTree : MySearchTree.BinarySearchTreePoint;
+   TestNode : MySearchTree.BinarySearchTreePoint;
+
+begin
+   --C OPTION STEPS
+   --1
+   MySearchTree.MakeEmptyBinarySearchTree(TestTree, "Head      ", "Node      ");
+   Insert(TestTree, "Furbee    ", "295-1492  ");
+   Insert(TestTree, "Lee       ", "291-1864  ");
+   Insert(TestTree, "Guo       ", "295-1601  ");
+   Insert(TestTree, "Hall      ", "293-6122  ");
+   Insert(TestTree, "Carazo    ", "295-1882  ");
+   Insert(TestTree, "Rios      ", "291-7890  ");
+   Insert(TestTree, "Sido      ", "294-8075  ");
+   Insert(TestTree, "Furbee    ", "584-3622  ");
+   --2
+   New_Line;
+   MySearchTree.FindCustomerIterative(TestTree, "Patil     ", TestNode);
+   Put("Patil # Iterative: ");
+   if not IsNull(TestNode) then
+      Put_Line(String(MySearchTree.CustomerPhone(TestNode)));
+   else
+      Put_Line("Not in tree.");
+   end if;
+   --3
+   MySearchTree.FindCustomerRecursive(TestTree, "Patil     ", TestNode);
+   Put("Patil # Recrusive: ");
+   if not IsNull(TestNode) then
+      Put_Line(String(MySearchTree.CustomerPhone(TestNode)));
+   else
+      Put_Line("Not in tree.");
+   end if;
+   --4
+   MySearchTree.FindCustomerIterative(TestTree, "Carazo    ", TestNode);
+   Put("Carazo # Iterative: ");
+   if not IsNull(TestNode) then
+      Put_Line(String(MySearchTree.CustomerPhone(TestNode)));
+   else
+      Put_Line("Not in tree.");
+   end if;
+   --5
+   MySearchTree.FindCustomerRecursive(TestTree, "Carazo    ", TestNode);
+   Put("Carazo # Recursive: ");
+   if not IsNull(TestNode) then
+      Put_Line(String(MySearchTree.CustomerPhone(TestNode)));
+   else
+      Put_Line("Not in tree.");
+   end if;
+   --6
+   New_Line;
+   Put_Line("Iterative InOrder Traversal From 'Guo':");
+   MySearchTree.FindCustomerIterative(TestTree, "Guo       ", TestNode);
+   Put("[");
+   Put(String(MySearchTree.CustomerName(TestNode)));
+   Put(",");
+   Put(String(MySearchTree.CustomerPhone(TestNode)));
+   Put_Line("]");
+   TestNode := MySearchTree.InOrderSuccessor(TestNode);
+   while MySearchTree.CustomerName(TestNode) /= "Guo       " loop
+      Put("[");
+      Put(String(MySearchTree.CustomerName(TestNode)));
+      Put(",");
+      Put(String(MySearchTree.CustomerPhone(TestNode)));
+      Put_Line("]");
+      TestNode := MySearchTree.InOrderSuccessor(TestNode);
+   end loop;
+   --7
+   New_Line;
+   Insert(TestTree, "Sodmann   ", "294-1568  ");
+   Insert(TestTree, "Carazo    ", "294-1882  ");
+   Insert(TestTree, "Montes    ", "295-6622  ");
+   --8
+   New_Line;
+   Put_Line("Iterative InOrder Traversal:");
+   TestNode := MysearchTree.InOrderSuccessor(TestTree);
+   Put("[");
+   Put(String(MySearchTree.CustomerName(TestNode)));
+   Put(",");
+   Put(String(MySearchTree.CustomerPhone(TestNode)));
+   Put_Line("]");
+   TestNode := MySearchTree.InOrderSuccessor(TestNode);
+   while TestNode /= MysearchTree.InOrderSuccessor(TestTree) loop
+      Put("[");
+      Put(String(MySearchTree.CustomerName(TestNode)));
+      Put(",");
+      Put(String(MySearchTree.CustomerPhone(TestNode)));
+      Put_Line("]");
+      TestNode := MySearchTree.InOrderSuccessor(TestNode);
+   end loop;
+   --B OPTION STEPS
+   --9
+   New_Line;
+   MySearchTree.FindCustomerIterative(TestTree, "Furbee    ", TestNode);
+   MySearchTree.DeleteRandomNode(TestTree, TestNode);
+   MySearchTree.FindCustomerIterative(TestTree, "Hall      ", TestNode);
+   MySearchTree.DeleteRandomNode(TestTree, TestNode);
+   MySearchTree.FindCustomerIterative(TestTree, "Furbee    ", TestNode);
+   MySearchTree.DeleteRandomNode(TestTree, TestNode);
+   MySearchTree.FindCustomerIterative(TestTree, "Sodmann   ", TestNode);
+   MySearchTree.DeleteRandomNode(TestTree, TestNode);
+   MySearchTree.FindCustomerIterative(TestTree, "Burris    ", TestNode);
+   MySearchTree.DeleteRandomNode(TestTree, TestNode);
+   MySearchTree.FindCustomerIterative(TestTree, "Furbee    ", TestNode);
+   MySearchTree.DeleteRandomNode(TestTree, TestNode);
+   --10
+   New_Line;
+   Insert(TestTree, "Caldwell  ", "294-1666  ");
+   Insert(TestTree, "Houck     ", "295-1882  ");
+   --11
+   New_Line;
+   Put_Line("Iterative InOrder Traversal:");
+   TestNode := MysearchTree.InOrderSuccessor(TestTree);
+   Put("[");
+   Put(String(MySearchTree.CustomerName(TestNode)));
+   Put(",");
+   Put(String(MySearchTree.CustomerPhone(TestNode)));
+   Put_Line("]");
+   TestNode := MySearchTree.InOrderSuccessor(TestNode);
+   while TestNode /= MysearchTree.InOrderSuccessor(TestTree) loop
+      Put("[");
+      Put(String(MySearchTree.CustomerName(TestNode)));
+      Put(",");
+      Put(String(MySearchTree.CustomerPhone(TestNode)));
+      Put_Line("]");
+      TestNode := MySearchTree.InOrderSuccessor(TestNode);
+   end loop;
+   --12
+   New_Line;
+   Put_Line("Recursive Reverse InOrder Traversal:");
+   MySearchTree.ReverseInOrder(TestTree);
+   --13
+   New_Line;
+   Put_Line("Iterative PreOrder Traversal Using Threads:");
+   MySearchTree.PreOrder(TestTree);
+   --A OPTION STEPS
+   --14
+   New_Line;
+   Put_Line("Iterative PostOrder Traversal Using Threads:");
+   MySearchTree.PostOrderIterative(TestTree);
+   --15
+   New_Line;
+   Put_Line("Recursive PostOrder Traversal:");
+   MySearchTree.PostOrderRecursive(TestTree);
+end BinarySearchTreeTest;
+

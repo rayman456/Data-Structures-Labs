@@ -1,0 +1,44 @@
+generic
+   type ITEM is
+         (<>);
+
+   with procedure Get (
+         Thing :    out ITEM);
+
+   with procedure Put (
+         Thing : in     ITEM);
+
+package TopoSort is
+
+      type Topological_Sort is private;
+
+   func
+
+   procedure SetNA (
+         Topo   : in out Topological_Sort;
+         Number : in     Integer);
+
+   procedure AddPartialOrder (
+         Topo   : in out Topological_Sort;
+         Before : in     ITEM;
+         After  : in     ITEM);
+
+   procedure TopologicalSort (
+         Topo : in     Topological_Sort);
+
+private
+   type Node;
+   type NodePt is Acces Node;
+   type Node is
+      record
+         Info : ITEM;
+         Next : NodePt;
+   end record;
+   type Topological_Sort is tagged
+      record
+         Na    : Integer;
+         QLink : array (<>) of ITEM;
+         Count : array (<>) of Integer;
+         Top   : array(<>) of NodePt;
+      end record;
+end TopoSort;

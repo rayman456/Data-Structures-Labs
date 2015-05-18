@@ -1,0 +1,218 @@
+V "GNAT Lib v3.13 "
+M P W=b
+P
+R nnvvnnnvnnvnvvvvvvvvvnvnnnnnnnvnnnnnnnvnvnn
+
+U radiotelescope%b	radiotelescope.adb	1B5CFE6E NE SU
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.strings.unbounded.text_io%s  a-suteio.adb	a-suteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.enumeration_aux%s  a-tienau.adb	a-tienau.ali
+W gstack%s		gstack.adb		gstack.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.val_enum%s	s-valenu.adb		s-valenu.ali
+W system.val_int%s	s-valint.adb		s-valint.ali
+W unchecked_conversion%s
+
+D ada.ads		19941113100442 2359F9ED
+D a-charac.ads		19951215111236 38C1E46A
+D a-chlat1.ads		19951215111244 2E99BCFF
+D a-except.ads		20000206195838 287FCF69
+D a-finali.ads		19971119213818 3F32DEEF
+D a-filico.ads		19970305085844 1DECB9AC
+D a-inteio.ads		19941113100258 767F630A
+D a-ioexce.ads		19941113132010 175CB67B
+D a-stream.ads		19971119213846 5F7C277B
+D a-string.ads		19941113100426 051AEC3E
+D a-strmap.ads		19971119213852 397ADA2A
+D a-strunb.ads		19981101012022 23CE47B9
+D a-suteio.ads		19991231230456 4205D177
+D a-tags.ads		19980811043500 45EF7E4E
+D a-textio.ads		20000206195936 2D24B708
+D a-tienau.ads		19971119213934 3E29667C
+D a-tienio.ads		20000720224058 58669188
+D a-tienio.adb		19990801231414 029EDE1E
+D a-tiinio.ads		19971119213950 284C234E
+D gstack.ads		20131010222010 5B9C2D45
+D gstack.adb		20131010215004 22F2D983
+D interfac.ads		19990427103020 0357E00A
+D i-cstrea.ads		19991223213434 70A316EF
+D radiotelescope.adb	20131010221726 26156821
+D system.ads		20000127081654 4379A8A7
+D s-exctab.ads		19990919165914 7A25F5F9
+D s-ficobl.ads		19990213013920 0C03FD47
+D s-finimp.ads		19980221074008 1C201C0F
+D s-finroo.ads		19960922055928 166D4EDA
+D s-parame.ads		20000204233622 25FE086A
+D s-secsta.ads		19990723212132 60A2A5CD
+D s-soflin.ads		19991222154230 006B24D7
+D s-stache.ads		19990409191030 42B57F2A
+D s-stalib.ads		20000204233632 438B3864
+D s-stoele.ads		19980907210904 131D4539
+D s-stratt.ads		19981014075624 1761725B
+D s-unstyp.ads		19990702065612 78AFB91D
+D s-valenu.ads		19960218043334 6DE61DC8
+D s-valint.ads		19960414233902 4D045982
+D unchconv.ads		19960730094842 72DC4539
+X 1 ada.ads
+18U9*Ada 24|1r6 2r5 3r6 4r5 5r6 6r5 7r6 8r5 9r6 10r5 40r28 42r27
+X 2 a-charac.ads
+19U13*Characters 24|5r10 6r9
+X 3 a-chlat1.ads
+18U24*Latin_1 24|5r21 6r20
+63e4*Space 24|81r59 184r59 313r59
+84e4*Semicolon 24|81r39 184r39 313r39
+X 7 a-inteio.ads
+20U13*Integer_Text_IO 24|7r10 8r9
+X 10 a-string.ads
+18U13*Strings 24|3r10 4r9 9r10 10r9
+X 12 a-strunb.ads
+43U21*Unbounded 24|3r18 4r17 9r18 10r17
+46R9*Unbounded_String 24|76r40 153r29 179r40 267r29 308r40 401r29
+50U13*Length 24|157r46 271r46 405r46
+63U13*To_String 24|159r34 273r34 407r34
+73U14*Append 24|82r22 185r22 314r22
+X 13 a-suteio.ads
+43U31*Text_IO 24|3r28 4r27
+X 15 a-textio.ads
+51U13*Text_IO 24|1r10 2r9 40r32 42r31
+169U14*New_Line 24|92r22 109r22 131r31 132r80 135r25 245r22 261r16 264r16
+. 370r31
+209U14*Get 24|80r22 183r22 312r22
+211U14*Put 24|97r55 129r31
+245U14*Put 24|61r7 64r10 91r22 97r28 104r22 105r22 106r22 108r22 121r22 132r31
+. 144r16 210r25 217r19 219r19 235r22 240r28 256r16 260r16 262r16 303r19 346r19
+. 348r19 372r31 387r16
+260U14*Put_Line 24|97r73 102r25 119r22 137r25 146r16 147r16 149r16 204r22
+. 210r72 215r22 221r19 230r22 240r76 247r22 258r16 259r16 333r22 339r25 344r22
+. 350r19 359r22 365r25 372r76 376r25 389r16 391r16 393r16 394r16 396r16
+X 17 a-tienio.ads
+50G21*Enumeration_IO 24|40r40 42r39
+56U14 Get 24|62r7
+64U14 Put 24|301r19
+X 19 a-tiinio.ads
+59U14*Get 24|65r10
+69U14*Put 24|107r22 124r25 132r69 145r16 210r51 218r19 220r19 236r22 240r65
+. 242r28 257r16 302r19 304r19 347r19 349r19 364r25 372r65 388r16
+X 20 gstack.ads
+7G9*GStack 24|12r6 72r47 173r45 293r42
+9U14 Push 24|95r25 100r22 208r22 213r19 337r22 342r19
+13U14 Pop 24|122r22 127r28 233r19 238r25 361r22 367r28
+21U13 Current_Size 24|90r41 107r26 118r22 203r30 220r23 229r22 332r30 349r23
+. 358r22
+23U13 Total_Size 24|90r58 203r46 332r46
+X 24 radiotelescope.adb
+14U11*RadioTelescope
+15E9 StackType 42r54 56r12
+16N11 C 70r15
+17N11 I 171r15
+18N11 D 291r15
+19N11 Done 63r19 435r15
+20E9 MonthName 35r18 40r55 418r53
+21N11 January
+22N11 February
+23N11 March
+24N11 April
+25N11 May
+26N11 June
+27N11 July
+28N11 August
+29N11 September
+30N11 October
+31N11 November
+32N11 December
+33R9 Date 51r38 53r29 293r49 296r64 299r38 321r42 355r29 384r28
+35e10 Month 301r30 418r44
+36i10 Day 302r30 421r44
+37i10 Year 304r30 424r44
+40U12 Month_IO 41r8
+42U12 Type_IO 43r8
+45U13 Character_To_Int 124r29 125r34
+47U13 Int_To_Character 100r27
+50U13 Int_To_Date 342r24
+52U13 Date_To_Int 363r34
+55i4 Size 65m14 72r65 145r20 173r61 253r40 257r20 293r55 383r45 388r20
+56e4 Stack 62m11 63r10 69r12
+59L4 Main
+72U24 Character_Stack 73r20
+75U26 GetInputString 155r22
+76R22 A_String 82m29
+77e19 Char 80m26 81r32 81r52 82r39
+86U26 InsertCharacters 165r28
+87s22 A_String 90r23 94r34 95r30 97r59 100r44 105r26
+88e19 Succeed 95m43 96r28 100m62 101r25
+94i26 I 95r39 97r68
+113U26 PopCharacters 161r28
+114i19 Count 125m25 126r37
+115e19 Temp 122m26 124r46 125r51 127m32 129r35
+116e19 Succeed 122m32 123r25 127m38 128r31
+126i29 I 132r73
+153R22 Temp 155m37 157r54 159r44
+157a25 Input 159m25 160r28 162r31 165r45
+173U24 Integer_Stack 174r20
+176A21 Int_Array 190r40 199r40 253r24
+178U26 GetInputString 269r22
+179R22 A_String 185m29
+180e19 Char 183m26 184r32 184r52 185r39
+189U26 RecordInteger 284r31
+190a22 IntArray 195r19
+191i22 Index 194m19 194r28 195r28
+192i22 An_Int 195r38
+198U26 PushInts 281r31
+199a22 IntArray 208r27 210r55
+200i22 Count 203r22 207r31 213r24 218r23
+201e19 Succeed 208m40 209r25 213m31 214r22
+207i23 I 208r36 210r64
+224U26 PopIntegers 275r28
+225i19 Count 233m23 236r26 237r34
+226i19 Int 238m29 242r32
+227e19 Succeed 233m30 234r22 238m34 239r28
+237i26 I 240r69
+251i16 Value 279m28 280r31 284r58
+252i16 Count 281r46 282m31 284m51
+253a16 Ints 281r40 284m45
+267R22 Temp 269m37 271r54 273r44
+271a25 Input 273m25 274r28 276r31 279r51
+293U24 Date_Stack 294r20
+296A21 Date_Array 319r42 328r42 383r28
+298U26 PrintDate 369r31
+299r22 A_Date 301r23 302r23 304r23
+307U26 GetInputString 403r22
+308R22 A_String 314m29
+309e19 Char 312m26 313r32 313r52 314r39
+318U26 RecordDate 425r34
+319a22 Some_Dates 324r19
+320i22 Index 323m19 323r28 324r30
+321r22 A_Date 324r40
+327U26 PushDates 411r28
+328a22 Some_Dates 337r27
+329i22 Count 332r22 336r31 342r36 347r23
+330e19 Succeed 337m42 338r25 342m44 343r22
+336i23 I 337r38
+353U26 PopDates 409r28
+354i19 Count 363m25 364r29 366r37
+355r19 Temp 361m26 363r46 367m32 369r41
+356e19 Succeed 361m32 362r25 367m38 368r31
+366i29 I 372r69
+381i16 Control 416r33 419m34 422m34 426m34
+382i16 Count 411r45 412m28 425m52
+383a16 Dates 411r38 425m45
+384r16 Temp_Date 418r34 418m44 421r34 421m44 424r34 424m44 425r59
+401R22 Temp 403m37 405r54 407r44
+405a25 Input 407m25 408r28 410r31 413r31 418r69 421r65 424r66
+X 40 unchconv.ads
+22G10*Unchecked_Conversion 24|11r6 46r8 48r8 51r8 53r8
+

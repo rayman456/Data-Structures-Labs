@@ -1,0 +1,128 @@
+with Ada.Text_IO;
+use Ada.Text_IO;
+with Ada.Integer_Text_IO;
+use Ada.Integer_Text_IO;
+package body DynamicStacks is
+
+   Top        : INT_ARRAY (1 .. NumberOfStacks);
+   Base       : INT_ARRAY (1 .. NumberOfStacks + 1);
+   StackSpace : ITEM_ARRAY (Lo..M);
+   OldTop     : INT_ARRAY (1 .. NumberOfStacks + 1);
+
+   procedure Setup is
+      Total : Integer;
+   begin
+      Total := Rear - Front;
+      for J in 1..NumberOfStacks loop
+         Base(J) := Integer(Float'Floor(Float(J-1) / Float(NumberOfStacks) * Float(Total)) + Float(Front));
+         Top(J) := Base(J);
+         OldTop(J) := Top(J);
+      end loop;
+      Base(NumberOfStacks+1) := Rear;
+   end;
+
+   procedure PrintArrays (
+         PrintOldTop : in     Boolean) is
+   begin
+      Put("Base [");
+      for X in 1..NumberOfStacks+1 loop
+         Put(Base(X), 2);
+         if X /= NumberOfStacks+1 then
+            Put(", ");
+         end if;
+      end loop;
+      Put_Line("]");
+      --print top
+      Put("Top [");
+      for X in 1..NumberOfStacks loop
+         Put(Top(X), 2);
+         if X /= NumberOfStacks then
+            Put(", ");
+         end if;
+      end loop;
+      Put_Line("]");
+      if PrintOldTop then
+         --print oldtop
+         Put("OldTop [");
+         for X in 1..NumberOfStacks loop
+            Put(OldTop(X), 2);
+            if X /= NumberOfStacks then
+               Put(", ");
+            end if;
+         end loop;
+         Put_Line("]");
+      end if;
+   end PrintArrays;
+
+   procedure PrintStacks is
+   begin
+      for J in 1..NumberOfStacks loop
+         Put("Stack ");
+         Put(J, 2);
+         Put(" [");
+         for X in Base(J) + 1..Top(J) loop
+            Put(X, 2);
+            Put(": ");
+            Put(StackSpace(X));
+            if X /= Top(J) then
+               Put(", ");
+            end if;
+         end loop;
+         Put_Line("]");
+      end loop;
+   end PrintStacks;
+
+
+   procedure Push (
+         K          : in     Integer;
+         Thing      : in     ITEM;
+         Successful :    out Boolean) is
+      Temp : Boolean;
+   begin
+      Top(K) := Top(K) + 1;
+      if Top(K) > Base(K+1) then
+         New_Line;
+         Put("OVERFLOW IN STACK ");
+         Put(K, 2);
+         Put_Line("!");
+         Top(K) := Top(K) - 1;
+         PrintArrays(True);
+         PrintStacks;
+         Top(K) := Top(K) + 1;
+         Put_Line("REALLOCATING...");
+         --Reallocate
+         Reallocate(Top, OldTop, Base, StackSpace, Minimum, EqualAllocate, K, Thing, Temp);
+         if Temp then
+            PrintArrays(False);
+            PrintStacks;
+            New_Line;
+            Successful := True;
+         else
+            Put_Line("Could Not Reallocate: Not Enough Space.");
+            New_Line;
+            Successful := False;
+            Top(K) := Top(K) - 1;
+         end if;
+      else
+         StackSpace(Top(K)) := Thing;
+         Successful := True;
+      end if;
+   end;
+
+   procedure Pop (
+         K          : in     Integer;
+         Thing      :    out ITEM;
+         Successful :    out Boolean) is
+   begin
+      if Top(K) = Base(K) then
+         --underflow
+         Successful := False;
+         return;
+      else
+         Thing := StackSpace(Top(K));
+         Top(K) := Top(K) - 1;
+         Successful := True;
+      end if;
+   end;
+
+end DynamicStacks;

@@ -1,0 +1,9 @@
+generic
+   type ITEM in private;
+   type ITEM_ARRAY is array (Natural range <>) of ITEM;
+   type INT_ARRAY is array (Natural range <>) of Integer;
+   procedure MoveStacks (
+         Base       : in out INT_ARRAY;
+         Top        : in out INT_ARRAY;
+         StackSpace : in out ITEM_ARRAY;
+         NewBase    : in     INT_ARRAY);

@@ -1,0 +1,152 @@
+with Ada.Text_IO; use Ada.Text_IO;
+with dynamicstacks;
+
+procedure StacksTest is
+   type Name is (Lee, Rios, Carazo, Hodges, Patil, Garza, Morgan, McLeod, Yager, Wills, Assi, Hall, Pokhrel, Sido, Keo, Sodemann, Davies, Furbee, Sparks, Vincik, Dedear, Guo, Duo, Burris);
+
+   package Name_IO is new Ada.Text_IO.Enumeration_IO(Name);
+   use Name_IO;
+
+   package NameStacks is new Dynamicstacks(Name, -5, 42, 2 ,17, 4, 0.09, 0.1);
+   use NameStacks;
+
+   A_Name : Name;
+
+begin
+
+   Setup;
+   Push(1, Lee);
+   Put_Line("Inserted.");
+
+   Push(1, Rios);
+   Put_Line("Inserted.");
+
+   Pop(1, A_Name);
+   Put(A_Name); New_Line;
+
+   Push(1, Carazo);
+   Put_Line("Inserted.");
+
+   Push(1, Hodges);
+   Put_Line("Inserted.");
+
+   Push(3, Patil);
+   Put_Line("Inserted.");
+
+   Push(2, Garza);
+   Put_Line("Inserted.");
+
+   Push(3, Morgan);
+   Put_Line("Inserted.");
+
+   Pop(4, A_Name);
+
+   Push(4, McLeod);
+   Put_Line("Inserted.");
+
+   Push(4, Yager);
+   Put_Line("Inserted.");
+
+   Pop(3, A_Name);
+   Put(A_Name); New_Line;
+
+   Pop(4, A_Name);
+   Put(A_Name); New_Line;
+
+   Push(1, Wills);
+   Put_Line("Inserted.");
+
+   Push(3, Assi);
+   Put_Line("Inserted.");
+
+   Push(1, Yager);
+   Put_Line("Inserted.");
+
+   Push(1, Hall);
+   Put_Line("Inserted.");
+
+   Push(4, Hodges);
+   Put_Line("Inserted.");
+
+   Push(1, Rios);
+   Put_Line("Inserted.");
+
+   Push(1, Lee);
+   Put_Line("Inserted.");
+
+   Push(1, Assi);
+   Put_Line("Inserted.");
+
+   Pop(1, A_Name);
+   Put(A_Name); New_Line;
+
+   Pop(1, A_Name);
+   Put(A_Name); New_Line;
+
+   Pop(1, A_Name);
+   Put(A_Name); New_Line;
+
+   Push(2, Pokhrel);
+   Put_Line("Inserted.");
+
+   Push(4, Sido);
+   Put_Line("Inserted.");
+
+   Push(4, Keo);
+   Put_Line("Inserted.");
+
+   Push(2, Sodemann);
+   Put_Line("Inserted.");
+
+   Push(4, Davies);
+   Put_Line("Inserted.");
+
+   Push(4, Hodges);
+   Put_Line("Inserted.");
+
+   Push(4, McLeod);
+   Put_Line("Inserted.");
+
+   Push(4, Furbee);
+   Put_Line("Inserted.");
+
+   Push(4, Garza);
+   Put_Line("Inserted.");
+
+   Push(1, Sparks);
+   Put_Line("Inserted.");
+
+   Push(1, Vincik);
+   Put_Line("Inserted.");
+
+   Push(1, Dedear);
+   Put_Line("Inserted.");
+
+   Push(2, Pokhrel);
+   Put_Line("Inserted.");
+
+   Push(1, Assi);
+   Put_Line("Inserted.");
+
+   Pop(2, A_Name);
+   Put(A_Name); New_Line;
+
+   Pop(2, A_Name);
+   Put(A_Name); New_Line;
+
+   Pop(2, A_Name);
+   Put(A_Name); New_Line;
+
+   Push(2, Guo);
+   Put_Line("Inserted.");
+
+   Push(2, Assi);
+   Put_Line("Inserted.");
+
+   Push(1, Duo);
+   Put_Line("Inserted.");
+
+   Push(1, Burris);
+   put_line("Inserted.");
+end;
+

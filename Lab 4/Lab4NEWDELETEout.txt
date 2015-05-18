@@ -1,0 +1,103 @@
+Inserted [Furbee    ,295-1492  ]
+Inserted [Lee       ,291-1864  ]
+Inserted [Guo       ,295-1601  ]
+Inserted [Hall      ,293-6122  ]
+Inserted [Carazo    ,295-1882  ]
+Inserted [Rios      ,291-7890  ]
+Inserted [Sido      ,294-8075  ]
+Inserted [Furbee    ,584-3622  ]
+
+Patil # Iterative: Not in tree.
+Patil # Recrusive: Not in tree.
+Guo # Iterative: 295-1882  
+Guo # Recursive: 295-1882  
+
+Iterative InOrder Traversal From 'Guo':
+[Guo       ,295-1601  ]
+[Hall      ,293-6122  ]
+[Lee       ,291-1864  ]
+[Rios      ,291-7890  ]
+[Sido      ,294-8075  ]
+[Carazo    ,295-1882  ]
+[Furbee    ,295-1492  ]
+[Furbee    ,584-3622  ]
+
+Inserted [Sodmann   ,294-1568  ]
+Inserted [Carazo    ,294-1882  ]
+Inserted [Montes    ,295-6622  ]
+
+Iterative InOrder Traversal:
+[Carazo    ,295-1882  ]
+[Carazo    ,294-1882  ]
+[Furbee    ,295-1492  ]
+[Furbee    ,584-3622  ]
+[Guo       ,295-1601  ]
+[Hall      ,293-6122  ]
+[Lee       ,291-1864  ]
+[Montes    ,295-6622  ]
+[Rios      ,291-7890  ]
+[Sido      ,294-8075  ]
+[Sodmann   ,294-1568  ]
+
+Deleting entry: [Furbee    ,295-1492  ]
+Deleting entry: [Hall      ,293-6122  ]
+Deleting entry: [Furbee    ,584-3622  ]
+Deleting entry: [Sodmann   ,294-1568  ]
+
+Inserted [Caldwell  ,294-1666  ]
+Inserted [Houck     ,295-1882  ]
+
+Iterative InOrder Traversal:
+[Caldwell  ,294-1666  ]
+[Carazo    ,295-1882  ]
+[Carazo    ,294-1882  ]
+[Guo       ,295-1601  ]
+[Houck     ,295-1882  ]
+[Lee       ,291-1864  ]
+[Montes    ,295-6622  ]
+[Rios      ,291-7890  ]
+[Sido      ,294-8075  ]
+
+Recursive Reverse InOrder Traversal:
+[Sido      ,294-8075  ]
+[Rios      ,291-7890  ]
+[Montes    ,295-6622  ]
+[Lee       ,291-1864  ]
+[Houck     ,295-1882  ]
+[Guo       ,295-1601  ]
+[Carazo    ,294-1882  ]
+[Carazo    ,295-1882  ]
+[Caldwell  ,294-1666  ]
+
+Iterative PreOrder Traversal Using Threads:
+[Guo       ,295-1601  ]
+[Carazo    ,295-1882  ]
+[Caldwell  ,294-1666  ]
+[Carazo    ,294-1882  ]
+[Lee       ,291-1864  ]
+[Houck     ,295-1882  ]
+[Rios      ,291-7890  ]
+[Montes    ,295-6622  ]
+[Sido      ,294-8075  ]
+
+Iterative PostOrder Traversal Using Threads:
+[Caldwell  ,294-1666  ]
+[Carazo    ,294-1882  ]
+[Carazo    ,295-1882  ]
+[Houck     ,295-1882  ]
+[Montes    ,295-6622  ]
+[Sido      ,294-8075  ]
+[Rios      ,291-7890  ]
+[Lee       ,291-1864  ]
+[Guo       ,295-1601  ]
+
+Recursive PostOrder Traversal:
+[Caldwell  ,294-1666  ]
+[Carazo    ,294-1882  ]
+[Carazo    ,295-1882  ]
+[Houck     ,295-1882  ]
+[Montes    ,295-6622  ]
+[Sido      ,294-8075  ]
+[Rios      ,291-7890  ]
+[Lee       ,291-1864  ]
+[Guo       ,295-1601  ]

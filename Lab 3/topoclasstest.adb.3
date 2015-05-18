@@ -1,0 +1,94 @@
+with TopoClass;
+with Ada.Text_IO;
+use Ada.Text_IO;
+with Ada.Integer_Text_IO;
+use Ada.Integer_Text_IO;
+with Ada.Strings.Unbounded;
+use Ada.Strings.Unbounded;
+with Ada.Strings.Unbounded.Text_IO;
+use Ada.Strings.Unbounded.Text_IO;
+
+procedure TopoClassTest is
+
+   type MyType is
+         (Nothing,
+          Garza,
+          Taylor,
+          Funk,
+          Sido,
+          Dedear,
+          Rocha,
+          McLeod,
+          Reioux,
+      Davies);
+
+   type SortType is (Int, Enum);
+
+   package MyTypeIO is new Ada.Text_IO.Enumeration_IO(MyType);
+
+   procedure IntPut (
+         Thing : in     Integer) is
+   begin
+      Put(Thing, 2);
+   end;
+
+   procedure MyTypePut (
+         Thing : in     MyType) is
+   begin
+      MyTypeIO.Put(Thing);
+   end;
+
+   package IntTopo is new TopoClass(Integer, IntPut);
+   package NameTopo is new TopoClass(MyType, MyTypePut);
+
+   NameTest : NameTopo.Topological_Sort := NameTopo.GenerateTopo(9);
+
+   procedure ParsePartialOrder(Topo : Topological_Sort; Order : Unbounded_String; ParseType : SortType) is
+      Index : Integer := 0;
+      First : Integer;
+      Second : Integer;
+      Input : String(1..Length(Order)) := To_String(Order);
+   begin
+      while Index <= Input'Last and then Input(Index) /= ' ' loop
+         Index := Index + 1;
+      end loop;
+      if Index > Input'Last or else Input(Index+1) /= '<' or else Input(Index+2) /= ' ' then
+         Put_Line("Invalid format: Could not parse.");
+         return;
+      end if;
+      case ParseType is
+         when Int =>
+               First : Integer := Index - 1; -- set indexes
+               Second : Integer := Index + 3;
+               First := Integer'Val(Input(1..FirstEnd)); -- parse string values
+               Sencond := Integer'Val(Input(SecondBegin..Input'Last));
+               IntTopo.AddPartialOrder(Topo, FirstEnd, SecondBegin); --add to sort
+         when Enum =>
+            declare
+               FirstName : MyType;
+               SecondName : Mytype;
+            begin
+               First : Integer := Index - 1; -- set indexes
+               Second : Integer := Index + 3;
+               FirstName := MyType'Val(Input(1..First));
+               SecondName := MYType'Val(Input(SecondName..Input'Last));
+               NameTopo.AddPartialOrder(Topo, FirstName, SecondName);
+            end;
+      end case ParseType;
+   end ParsePartialOrder;
+
+      Input : Unbounded_String;
+      Test : IntTopo.Topological_Sort := GenerateTopo(11);
+
+begin
+   loop
+      Input := Get_Line;
+      if Input = "print" then
+         IntTopo.PrintTopo(Test);
+      elsif Input = "sort" then
+         IntTopo.TopologicalSort(Test);
+      else
+         ParsePartialOrder(Test, Input, Int)L
+            e
+   end loop;
+end TopoClassTest;

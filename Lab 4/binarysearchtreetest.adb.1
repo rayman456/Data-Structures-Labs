@@ -1,0 +1,65 @@
+with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Strings.Fixed; use Ada.Strings.Fixed;
+with BinarySearchTree;
+
+procedure BinarySearchTreeTest is
+
+   type String10 is new String(1..10);
+   type Customer is record
+      Name : String10;
+      PhoneNumber: String10;
+   end record;
+
+   function equal is new Ada.Strings.Equal_Case_Insensitive;
+
+   function "<" (TheKey : in String10; ARecord : in Customer) return Boolean is
+   begin
+      return Translate(String(TheKey), Ada.Strings.Maps.Constants.Lower_Case_Map) < Translate(String(ARecord.Name));
+   end;
+
+   function ">" (TheKey : in String10; ARecord : in Customer) return Boolean is
+   begin
+      return False;
+   end;
+
+   function "=" (TheKey : in String10; ARecord : in Customer) return Boolean is
+   begin
+      return equal(String(TheKey), String(ARecord.Name));
+   end;
+
+   function GetName(ARecord : in Customer) return String10 is
+   begin
+      return ARecord.Name;
+   end;
+
+   function GetPhone(ARecord : in Customer) return String10 is
+   begin
+      return ARecord.PhoneNumber;
+   end;
+
+   function NewCustomer(NewName : in String10; NewPhone : in String10) return Customer is
+   begin
+      return (Name => NewName, PhoneNumber => NewPhone);
+   end;
+
+   procedure PutString10(Input : in String10) is
+   begin
+      Put(String(Input));
+   end PutString10;
+
+   package MySearchTree is new BinarySearchTree(String10, Customer, "<", ">", "=", GetName, GetPhone, NewCustomer, PutString10);
+
+   TestTree : MySearchTree.BinarySearchTreePoint;
+begin
+   MySearchTree.MakeEmptyBinarySearchTree(TestTree);
+   MySearchTree.InsertBinarySearchTree(TestTree, "Furbee    ", "295-1492  ");
+   MySearchTree.InsertBinarySearchTree(TestTree, "Lee       ", "291-1864  ");
+   MySearchTree.InsertBinarySearchTree(TestTree, "Guo       ", "295-1601  ");
+   MySearchTree.InsertBinarySearchTree(TestTree, "Hall      ", "293-6122  ");
+   MySearchTree.InsertBinarySearchTree(TestTree, "Carazo    ", "295-1882  ");
+   MySearchTree.InsertBinarySearchTree(TestTree, "Rios      ", "291-7890  ");
+   MySearchTree.InsertBinarySearchTree(TestTree, "Sido      ", "294-8075  ");
+   MySearchTree.InsertBinarySearchTree(TestTree, "Furbee    ", "584-3622  ");
+   put("yay");
+end BinarySearchTreeTest;
+

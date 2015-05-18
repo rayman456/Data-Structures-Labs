@@ -1,0 +1,98 @@
+integer or names? 
+Enter Number of Actions: 
+Added action - 3- before action - 4-.
+Added action - 3- before action - 4-.
+Added action -11- before action - 9-.
+Added action - 6- before action - 1-.
+Added action - 8- before action - 7-.
+Added action -10- before action - 9-.
+Added action - 8- before action - 3-.
+Added action - 6- before action - 7-.
+Added action - 8- before action -10-.
+Added action - 2- before action - 3-.
+Added action - 5- before action - 4-.
+Added action - 2- before action - 7-.
+Added action - 5- before action - 1-.
+Added action - 6- before action - 9-.
+Added action -11- before action - 1-.
+Added action - 5- before action - 6-.
+Perform action  2
+Perform action  5
+Perform action  8
+Perform action 11
+Perform action  6
+Perform action 10
+Perform action  3
+Perform action  7
+Perform action  1
+Perform action  9
+Perform action  4
+Successful Sort!
+integer or names? 
+Enter Number of Actions: 
+Added action -11- before action - 1-.
+Added action - 6- before action - 1-.
+Added action - 8- before action - 7-.
+Added action -10- before action - 9-.
+Added action - 6- before action - 9-.
+Added action - 3- before action - 4-.
+Added action - 6- before action - 7-.
+Added action - 8- before action -10-.
+Added action - 2- before action - 3-.
+Added action - 5- before action - 4-.
+Added action - 8- before action - 3-.
+Added action - 2- before action - 7-.
+Added action - 5- before action - 1-.
+Added action - 5- before action - 6-.
+Added action - 4- before action - 8-.
+Added action - 3- before action - 5-.
+Added action - 2- before action - 5-.
+Added action -11- before action - 9-.
+Added action - 1- before action - 6-.
+Added action - 1- before action - 2-.
+Perform action 11
+Error!
+Loop Found:  1 ->  5 ->  2 ->  1
+integer or names? 
+Added action -GARZA- before action -TAYLOR-.
+Added action -FUNK- before action -TAYLOR-.
+Added action -SIDO- before action -DEDEAR-.
+Added action -ROCHA- before action -MCLEOD-.
+Added action -MCLEOD- before action -DEDEAR-.
+Added action -TAYLOR- before action -SIDO-.
+Added action -FUNK- before action -SIDO-.
+Added action -REIOUX- before action -DEDEAR-.
+Added action -DAVIES- before action -FUNK-.
+Added action -FUNK- before action -DEDEAR-.
+Added action -FUNK- before action -TAYLOR-.
+Perform action GARZA
+Perform action ROCHA
+Perform action REIOUX
+Perform action DAVIES
+Perform action MCLEOD
+Perform action FUNK
+Perform action TAYLOR
+Perform action SIDO
+Perform action DEDEAR
+Successful Sort!
+integer or names? 
+Added action -GARZA- before action -TAYLOR-.
+Added action -FUNK- before action -TAYLOR-.
+Added action -SIDO- before action -DEDEAR-.
+Added action -ROCHA- before action -MCLEOD-.
+Added action -MCLEOD- before action -DEDEAR-.
+Added action -TAYLOR- before action -SIDO-.
+Added action -FUNK- before action -SIDO-.
+Added action -REIOUX- before action -DEDEAR-.
+Added action -DAVIES- before action -FUNK-.
+Added action -FUNK- before action -DEDEAR-.
+Added action -FUNK- before action -TAYLOR-.
+Added action -DEDEAR- before action -FUNK-.
+Perform action GARZA
+Perform action ROCHA
+Perform action REIOUX
+Perform action DAVIES
+Perform action MCLEOD
+Error!
+Loop Found: FUNK -> DEDEAR -> FUNK
+integer or names? 

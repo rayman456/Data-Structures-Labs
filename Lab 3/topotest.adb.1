@@ -1,0 +1,25 @@
+with Toposort;
+with Ada.Text_IO;
+
+procedure TopoTest is
+   type MyType is
+         (Nothing,
+          Mary,
+          Joe,
+          Tom,
+          Bob,
+          Sara,
+          Julie,
+          Larry,
+      Sam);
+
+   package NameIO is new Ada.Text_IO.Enumeration_IO(MyType);
+   use NameIO;
+
+
+   package NameTopoSort is new Toposort(MyType, Get, Put);
+   use NameTopoSort;
+begin
+   TopologicalSort;
+end;
+

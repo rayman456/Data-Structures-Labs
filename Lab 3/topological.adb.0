@@ -1,0 +1,126 @@
+with Ada.Integer_Text_IO;
+use Ada.Integer_Text_IO;
+with Ada.Text_IO;
+use Ada.Text_IO;
+with Ada.Unchecked_Deallocation;
+
+procedure Topological is
+
+   type Int;
+   type IntPt is access Int;
+   type Int is
+      record
+         Number : Integer;
+         Next   : IntPt;
+      end record;
+
+   procedure Free is
+   new Ada.Unchecked_Deallocation(Int, IntPt);
+
+   NA : Integer;
+   KN : Integer;
+
+begin
+   --Step 1
+   Put("Enter total # of steps: ");
+   Get(Na);
+   Put("Enter total # of relations: ");
+   Get(KN);
+   declare
+      Count : array (1 .. NA) of Integer := (others => 0);
+      Top   : array (1 .. NA) of IntPt   := (others => null);
+      QLink : array (0 .. NA) of Integer := (others => 0);
+      J     : Integer;
+      K     : Integer;
+      F     : Integer;
+      R     : Integer;
+      P     : IntPt;
+   begin
+      --Step 2
+      for I in reverse 1..KN loop
+         Put("Step: ");
+         Get(J);
+         Put("Comes before step: ");
+         Get(K);
+         Top(J) := new Int'(
+            Number => K,
+            Next   => Top (J));
+         Count(K) := Count(K) + 1;
+         Put("You have ");
+         Put(I - 1, 2);
+         Put_Line(" relations left.");
+      end loop;
+      KN := NA;
+      --Step 3
+      R := 0;
+      QLink(0) := 0;
+      for I in 1..NA loop
+         if Count(I) = 0 then
+            QLink(R) := I;
+            R := I;
+         end if;
+      end loop;
+      F := Qlink(0);
+      --Step 4
+      while F /= 0 loop
+         Put("Perform Action ");
+         Put(F, 2);
+         New_Line;
+         KN := KN - 1;
+         P := Top(F);
+         Top(F) := null;
+         while P /= null loop
+            Count(P.Number) := Count(P.Number) - 1;
+            if Count(P.Number) = 0 then
+               QLink(R) := P.Number;
+               R := P.Number;
+            end if;
+            P := P.Next;
+         end loop;
+         F := QLink(F);
+      end loop;
+      --Step 5
+      if KN = 0 then
+         Put("Successful topological sort!");
+      else
+         Put_Line("ERROR!");
+         for I in 1..NA loop
+            QLink(I) := 0;
+         end loop;
+         --step 6
+         for I in 1..NA loop
+            P := Top(I);
+            Top(I) := null;
+            while P /= null loop
+               if QLink(P.Number) = 0 then
+                  Qlink(P.Number) := I;
+               end if;
+               P := P.Next;
+            end loop;
+         end loop;
+         --step 7
+         K := 1;
+         while QLink(K) = 0 loop
+            K := K + 1;
+         end loop;
+         --step 8
+         loop
+            Top(K) := new Int'(0, null);
+            K := Qlink(K);
+            exit when Top(K) /= null;
+         end loop;
+         --step 9
+         Put("Loop Found: ");
+         while Top(K) /= null loop
+            Put(K, 2);
+            Put(" -> ");
+            Top(K) := null;
+            K := QLink(K);
+         end loop;
+         put(K, 2);
+         New_Line;
+      end if;
+      --end
+   end;
+end;
+

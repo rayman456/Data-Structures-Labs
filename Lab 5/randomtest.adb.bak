@@ -1,0 +1,42 @@
+with Ada.Text_IO; use Ada.Text_IO;
+
+procedure RandomTest is
+
+   type RandomAddress128
+         (Initial_Address : Long_Integer) is
+      record
+         Address : Long_Integer := (Initial_Address * 4) + 1;
+   end record;
+
+   function GetAddress128 (
+         RA : in     RandomAddress128)
+     return Long_Integer is
+   begin
+      return RA.Address / 4;
+   end GetAddress128;
+
+   procedure NextAddress128 (
+         RA : in out RandomAddress128) is
+   begin
+      RA.Address := RA.Address * 5;
+      RA.Address := RA.Address mod 512;
+   end NextAddress128;
+
+   package LIIO is new  Ada.Text_IO.Integer_IO(Long_Integer);
+   use LIIO;
+
+   Random : RandomAddress128(1);
+
+begin
+
+   Put("Starting Address : "); Put(GetAddress128(Random), 3); New_Line;
+   Put_Line("The Sequence is:");
+   NextAddress128(Random);
+   while GetAddress128(Random) /= 1 loop
+      Put(GetAddress128(Random)); New_Line;
+      NextAddress128(Random);
+   end loop;
+
+end RandomTest;
+
+

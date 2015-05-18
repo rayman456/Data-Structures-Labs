@@ -1,0 +1,125 @@
+with Ada.Text_IO;
+use Ada.Text_IO;
+with Ada.Integer_Text_IO;
+use Ada.Integer_Text_IO;
+with Ada.Unchecked_Deallocation;
+package body TopoClass is
+
+   function GenerateTopo (
+         Number : Integer)
+     return Topological_Sort is
+      Temp : Topological_Sort (Number, ITEM'Val (Number));
+   begin
+      return Temp;
+   end GenerateTopo;
+
+   procedure AddPartialOrder (
+         Topo : in out Topological_Sort;
+         Before    : in     ITEM;
+         After    : in     ITEM) is
+   begin
+      Topo.Count(After) := Topo.Count(After) + 1;
+      Topo.Top(Before) := new Node'(Info => After, Next => Topo.Top(Before));
+   end AddPartialOrder;
+
+   procedure PrintTopo (
+         Topo : in     Topological_Sort) is
+      P : NodePt;
+      Count : Integer;
+   begin
+      for I in ITEM'Val(0)..ITEM'Val(Topo.NA) loop
+         Put(I);
+         Put(": Count(");
+         Put(Topo.Count(I), 2);
+         Put(") ");
+         P := Topo.Top(I);
+         Count := 0;
+         while Count <= 6 and then P /= null loop
+            Put(P.Info);
+            Put(" -> ");
+            P := P.Next;
+            Count := Count + 1;
+         end loop;
+         Put_Line("null");
+      end loop;
+   end PrintTopo;
+
+   procedure TopologicalSort (
+         Topo : in     Topological_Sort) is
+      K    : ITEM;
+      F    : ITEM;
+      R    : ITEM;
+      KN   : Integer;
+      P    : NodePt;
+      Temp : Topological_Sort := Topo;
+      procedure Free is
+      new Ada.Unchecked_Deallocation(Node, NodePt);
+   begin
+      KN := Temp.NA;
+      R := ITEM'Val(0);
+      Temp.QLink(ITEM'Val(0)) := ITEM'Val(0);
+      for I in ITEM'Val(1)..ITEM'Val(Temp.NA) loop
+         if Temp.Count(I) = 0 then
+            Temp.QLink(R) := I;
+            R := I;
+         end if;
+      end loop;
+      F := Temp.QLink(ITEM'Val(0));
+      while F /= ITEM'Val(0) loop
+         Put("Perform action ");
+         Put(F);
+         New_Line;
+         KN := KN - 1;
+         P := Temp.Top(F);
+         Temp.Top(F) := null;
+         while P /= null loop
+            Temp.Count(P.Info) := Temp.Count(P.Info) - 1;
+            if Temp.Count(P.Info) = 0 then
+               Temp.QLink(R) := P.Info;
+               R := P.Info;
+            end if;
+            P := P.Next;
+         end loop;
+         F := Temp.QLink(F);
+      end loop;
+      if KN = 0 then
+         Put_Line("Successful Sort!");
+      else
+         Put_Line("Error!");
+         for I in ITEM'Val(1)..ITEM'Val(Temp.NA) loop
+            Temp.QLink(I) := ITEM'Val(0);
+         end loop;
+         for I in ITEM'Val(1)..ITEM'Val(Temp.NA) loop
+            P := Temp.Top(I);
+            Temp.Top(I) := null;
+            while P /= null loop
+               if Temp.QLink(P.Info) = ITEM'Val(0) then
+                  Temp.QLink(P.Info) := I;
+               end if;
+               P := P.Next;
+            end loop;
+         end loop;
+         K := ITEM'Val(1);
+         while Temp.QLink(K) = ITEM'Val(0) loop
+            K := ITEM'Succ(K);
+         end loop;
+         loop
+            Temp.Top(K) := new Node'(
+               Info => ITEM'Val (0),
+               Next => null);
+            K := Temp.QLink(K);
+            exit when Temp.Top(K) /= null;
+         end loop;
+         Put("Loop Found: ");
+         while Temp.Top(K) /= null loop
+            Put(K);
+            Put(" -> ");
+            Temp.Top(K) := null;
+            K := Temp.QLink(K);
+         end loop;
+         Put(K);
+         New_Line;
+      end if;
+   end;
+
+end TopoClass;

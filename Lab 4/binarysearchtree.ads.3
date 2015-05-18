@@ -1,0 +1,129 @@
+generic
+   type Akey is private;
+   type BinarySearchTreeRecord is private;
+   -- These functions compare two nodes in the tree.
+   with function "<" (
+         TheKey  : in     Akey;
+         ARecord : in     BinarySearchTreeRecord)
+     return Boolean;-- Is TheKey less than the key of ARecord?
+
+   with function ">" (
+         TheKey  : in     Akey;
+         ARecord : in     BinarySearchTreeRecord)
+     return Boolean;
+
+   with function "=" (
+         TheKey  : in     Akey;
+         ARecord : in     BinarySearchTreeRecord)
+     return Boolean;--Is TheKey equal to the key of ARecord?
+
+   --needed if I want to manipulate tree record data fields since this is generic
+   with function GetName (
+         ARecord : in     BinarySearchTreeRecord)
+     return AKey;
+   with function GetPhone (
+         ARecord : in     BinarySearchTreeRecord)
+     return AKey;
+   with function NewCustomer (
+         Name  : in     AKey;
+         Phone : in     AKey)
+     return BinarySearchTreeRecord;
+
+   --needed to print keys
+   with procedure Put (
+         Key : in     AKey);
+
+package BinarySearchTree is
+   -- Points to a node in a binary search tree.
+   type BinarySearchTreePoint is private;
+
+   --Constructor
+   procedure MakeEmptyBinarySearchTree (
+         NewTree : in out BinarySearchTreePoint;
+         Name    : in     AKey;
+         Phone   : in     AKey);
+
+   --Check if a tree pointer is null
+   function IsNull (
+         Tree : in     BinarySearchTreePoint)
+     return Boolean;
+
+   --Returns the size of the tree.
+   function TreeSize (
+         Tree : in     BinarySearchTreePoint)
+     return Integer;
+
+   -- This procedure inserts a node (customer) into the tree in search tree order. If a customer with
+   -- duplicate name already customer exist, the new customer should be inserted so they would
+   -- appear -after- the older customer when the tree is traversed in inorder.
+   -- The tree must be threaded in "inorder."  The search to locate the position for the new
+   -- record must be iterative!
+   procedure InsertBinarySearchTree (
+         Root      : in out BinarySearchTreePoint;
+         CustName  : in     Akey;
+         CustPhone : in     Akey);
+
+   -- This procedure locates a customer using a binary search.  A pointer is returned to the
+   -- customer record if they exist, otherwise a Null pointer is returned (in CustomerPoint).
+   -- The search must be implemented iteratively.
+   procedure FindCustomerIterative (
+         Root          : in     BinarySearchTreePoint;
+         CustomerName  : in     Akey;
+         CustomerPoint :    out BinarySearchTreePoint);
+
+   -- This procedure locates a customer using a binary search.  A pointer is returned to the
+   -- customer record if they exist, otherwise a Null pointer is returned (in CustomerPoint).
+   -- The search must be implemented recursively.
+   procedure FindCustomerRecursive (
+         Root          : in     BinarySearchTreePoint;
+         CustomerName  : in     Akey;
+         CustomerPoint :    out BinarySearchTreePoint);
+
+   -- This function returns the address of the next node in "inorder."  The user may enter the
+   -- tree at any random location.  This is sometimes called an iteration function
+   -- (no recursion).
+   function InOrderSuccessor (
+         TreePoint : in     BinarySearchTreePoint)
+     return BinarySearchTreePoint;
+
+   -- Access functions to return customer names and phone numbers.
+   function CustomerName (
+         TreePoint : in     BinarySearchTreePoint)
+     return Akey;
+   function CustomerPhone (
+         TreePoint : in     BinarySearchTreePoint)
+     return Akey;
+
+   --Deletes a random node given the pointer to the node and the tree the node is in.
+   --The pointer to the delete node will be null after execution.
+   procedure DeleteRandomNode (
+         Tree        : in     BinarySearchTreePoint;
+         DeletePoint : in out BinarySearchTreePoint);
+
+   procedure ReverseInOrder (
+         Start : in     BinarySearchTreePoint);
+
+   -- Iterative procedure utilizing threads that prints the name fields of the tree in preorder
+   -- from within the procedure as it traverses the nodes.
+   procedure PreOrder (
+         TreePoint : in     BinarySearchTreePoint);
+
+   --Procedure to traverse the tree utilizing threads printing the name fields.
+   --You may assume traversal will always start at the root.
+   procedure PostOrderIterative (
+         TreePoint : in out BinarySearchTreePoint);
+   procedure PostOrderRecursive (
+         TreePoint : in out BinarySearchTreePoint);
+
+private
+   type Node;
+   type BinarySearchTreePoint is access Node;
+   type Node is
+      record
+         Llink,
+         Rlink : BinarySearchTreePoint;
+         Ltag,
+         Rtag  : Boolean;                -- True indicates pointer to lower level, False a thread.
+         Info  : BinarySearchTreeRecord;
+      end record;
+end BinarySearchTree;

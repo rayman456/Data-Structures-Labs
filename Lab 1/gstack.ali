@@ -1,0 +1,28 @@
+V "GNAT Lib v3.13 "
+P
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U gstack%b		gstack.adb		796EF4C6 PK GE
+
+U gstack%s		gstack.ads		5B9C2D45 NE PK GE
+
+D gstack.ads		20131010222010 5B9C2D45
+D gstack.adb		20131010215004 22F2D983
+X 1 gstack.ads
+3+9 ITEM 2|30r24 1|10r24 2|3r38 1|14r24 2|17r24
+5i4 Size 2|3r29 13r20 49r14
+7G9*GStack 2|1b14
+9U14 Push 2|16b14
+10+7 Stuff 2|17b7 25r26
+11e7 Succeed 2|18b7 21m10 26m7
+13U14 Pop 2|29b14
+14+7 Stuff 2|30b7 37m7
+15e7 Succeed 2|31b7 34m10 39m7
+17U13 Is_Empty 2|6b13 33r10
+19U13 Is_Full 2|11b13 20r10
+21U13 Current_Size 2|42b13
+23U13 Total_Size 2|47b13
+X 2 gstack.adb
+3a4 StackArray 25r7 37r16
+4i4 Top 8r14 13r14 24m7 24r14 25r18 37r27 38m7 38r14 44r14
+

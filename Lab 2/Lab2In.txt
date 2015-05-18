@@ -1,0 +1,122 @@
+Names
+-5
+42
+2
+17
+4
+I1 Lee;
+I1 Rios;
+D1;
+I1 Carazo;
+I1 Hodges;
+I3 Patil;
+I2 Garza;
+I3 Morgan;
+D4;
+I4 McLeod;
+I4 Yager;
+D3;
+D4;
+I1 Wills;
+I3 Assi;
+I1 Yager;
+I1 Hall;
+I4 Hodges;
+I1 Rios;
+I1 Lee;
+I1 Assi;
+D1;
+D1;
+D1;
+I2 Pokhrel;
+I4 Sido;
+I4 Keo;
+I2 Sodemann;
+I4 Davies;
+I4 Hodges;
+I4 McLeod;
+I4 Furbee;
+I4 Garza;
+I1 Sparks;
+I1 Vincik;
+I1 Dedear;
+I2 Pokhrel;
+I1 Assi;
+D2;
+D2;
+D2;
+I2 Guo;
+I2 Assi;
+I1 Doo;
+I1 Burris;
+exit;
+Names
+-5
+42
+15
+39
+3
+I1 Lee;
+I1 Rios;
+D1;
+I1 Carazo;
+I1 Hodges;
+I3 Patil;
+I2 Garza;
+I3 Morgan;
+D3;
+I1 Wills;
+I3 Assi;
+I1 Yager;
+I1 Hall;
+I1 Rios;
+I1 Lee;
+I1 Assi;
+D1;
+D1;
+D1;
+I2 Pokhrel;
+I2 Sodemann;
+I1 Sparks;
+I1 Vincik;
+I1 Dedear;
+I2 Pokhrel;
+I1 Assi;
+D2;
+D2;
+D2;
+I2 Guo;
+I2 Assi;
+I1 Doo;
+I1 Burris;
+exit;
+Dates
+0
+50
+0
+20
+3
+I2 January 15 1956;
+I2 February 14 1947;
+I3 October 16 1986;
+I2 September 17 1842;
+I1 December 24 1996;
+D3;
+D1;
+I3 March 16 1992;
+D3;
+D1;
+I2 January 15 1956;
+I3 April 14 1492;
+I3 November 7 1776;
+I3 June 12 1994;
+I2 July 4 1776;
+I2 January 15 2012;
+I3 December 6 1991;
+I3 March 5 1886;
+I1 October 24 1996;
+I1 November 23 1996;
+I1 November 2 1990;
+I3 September 14 1998;
+exit;
+done

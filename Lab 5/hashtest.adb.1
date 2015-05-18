@@ -1,0 +1,133 @@
+with Ada.Unchecked_Conversion;
+with Ada.Text_IO;
+use Ada.Text_IO;
+with Ada.Integer_Text_IO;
+use Ada.Integer_Text_IO;
+with Ada.Float_Text_IO;
+use Ada.Float_Text_IO;
+with HashTable128;
+with Interfaces; use Interfaces;
+
+procedure HashTest is
+
+   type String16 is new String
+      (1 .. 16);
+
+   package Long_IO is new Ada.Text_IO.Integer_IO(Long_Integer);
+   use Long_IO;
+
+   function GetBadHashAddress (
+         Key : in     String16)
+     return Long_Integer is
+      type String2 is new String
+            (1 .. 2);
+      function StringToInt is
+      new Ada.Unchecked_Conversion(String2, Long_Integer);
+      Address : Long_Integer;
+   begin
+      Address := (abs (StringToInt(String2(Key(13..14))))) + (abs (StringToInt(String2(Key(15..16)))));
+      return  (Address mod 128) + 1;
+   end GetBadHashAddress;
+
+   function GetGoodHashAddress (
+         Key : in     String16)
+     return Long_Integer is
+      type String4 is new String
+            (1 .. 4);
+      function StringToInt is
+      new Ada.Unchecked_Conversion(String4, Long_Integer);
+      Address : Long_Integer;
+   begin
+      --Fold, shifting right 5 for no overflow
+      Address := ((StringToInt(String4(Key(1..4)))/(2 ** 5))) + ((StringToInt(String4(Key(5..8)))/(2 ** 5))) + ((StringToInt(String4(Key(9..12)))/(2 ** 5))) + ((StringToInt(String4(Key(13..16)))/(2 ** 5)));
+      --Square
+      Address := Address ** 2;
+      --Extract middle 7 bits (0 to 127)
+      Address := Long_Integer(Shift_Left(Unsigned_32(Address), 12));
+      Address := Long_Integer(Shift_Right(Unsigned_32(Address), 25));
+      --return 1-indexed address
+      return abs Address + 1;
+   end GetGoodHashAddress;
+
+   procedure PutString16 (
+         Key : in     String16) is
+   begin
+      Put(String(Key));
+   end PutString16;
+
+   Percent_Full : Float;
+   Input        : File_Type;
+   Probes       : Integer;
+   End_Line     : Integer            := 1;
+   Min          : Integer            := 128;
+   Max          : Integer            := 0;
+   Average      : Integer            := 0;
+   Key          : String16;
+
+begin
+
+   declare
+      package HashTable is new HashTable128(String16, GetBadHashAddress, PutString16);
+      use HashTable;
+      TestTable : LinearHashTable128;
+   begin
+
+      SetupHashTable(TestTable, "                ");
+      Open(Input, In_File, "Words200D16.txt");
+      loop
+         Get(Input, String(Key));
+         InsertLinearProbe(TestTable, Key, Percent_Full);
+         End_Line := End_Line + 1;
+         exit when Percent_Full > 0.78 or End_Of_File(Input);
+      end loop;
+      PrintTable(TestTable);
+      Put("Table is ");
+      Put(Percent_Full * 100.0, 2, 2, 0);
+      Put_Line("% Full.");
+
+      Close(Input);
+      New_Line;
+      Open(Input, In_File, "Words200D16.txt");
+
+      Put_Line("Probing First 30 Keys...");
+      for X in 1..30 loop
+         Get(Input, String(Key));
+         --Put("Searching for: "); Put_Line(String(Key));
+         SearchLinearProbe(TestTable, Key, Probes);
+         if Probes < Min then
+            Min := Probes;
+         end if;
+         if Probes > Max then
+            Max := Probes;
+         end if;
+         Average := Average + Probes;
+      end loop;
+
+      Set_Line(Input, Positive_Count(End_Line - 30));
+      Put_Line("Probing Last 30 Keys...");
+
+      for X in 1..30 loop
+         Get(Input, String(Key));
+         --Put("Searching for: "); Put_Line(String(Key));
+         SearchLinearProbe(TestTable, Key, Probes);
+         if Probes < Min then
+            Min := Probes;
+         end if;
+         if Probes > Max then
+            Max := Probes;
+         end if;
+         Average := Average + Probes;
+      end loop;
+
+      Put("Minimum Probes: ");
+      Put(Min, 3);
+      New_Line;
+      Put("Maximum Probes: ");
+      Put(Max, 3);
+      New_Line;
+      Put("Average Probes: ");
+      Put(Float(Average) / 60.0, 2, 2, 0);
+      New_Line;
+   end;
+
+end HashTest;

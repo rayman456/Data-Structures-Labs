@@ -1,0 +1,40 @@
+procedure Algorithms is
+
+   type Int_Array is array(Positive range <>) of Integer;
+
+   procedure MoveStacks(
+         NewBase    : in     Int_Array;
+         Base       : in out Int_Array;
+         Top        : in out Int_Array;
+         StackSpace : in out Int_Array) is
+      Delt : Integer;
+   begin
+      for J in 2..Base'Length loop
+         if NewBase(J) < Base(J) then
+            Delt := Base(J) - NewBase(J);
+            for L in (Base(J) + 1)..Top(J) loop
+               StackSpace(L - Delt) := StackSpace(L);
+            end loop;
+            Base(J) := NewBase(J);
+            Top(J) := Top(J) - Delt;
+         end if;
+      end loop;
+      for J in reverse 2..Base'Length loop
+         if NewBase(J) > Base(J) then
+            Delt := NewBase(J) - Base(J);
+            for L in reverse (Base(J) + 1)..Top(J) loop
+               StackSpace(L + Delt) := StackSpace(L);
+            end loop;
+            Base(J) := NewBase(J);
+            Top(J) := Top(J) + Delt;
+         end if;
+      end loop;
+   end;
+
+   procedure Reallocate is
+   begin
+   end;
+
+begin
+end;
+

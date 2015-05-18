@@ -1,0 +1,1332 @@
+Hash Table Contents:
+#  1: [magnetic        ]
+#  2: [inlet           ]
+#  3: [constrain       ]
+#  4: [marsupial       ]
+#  5: [rationalize     ]
+#  6: [scat            ]
+#  7: [toluene         ]
+#  8: [wet             ]
+#  9: [sparse          ]
+# 10: [quandary        ]
+# 11: [dactyl          ]
+# 12: [nosegay         ]
+# 13: [option          ]
+# 14: [forgetful       ]
+# 15: [ratiocination   ]
+# 16: [privilege       ]
+# 17: [sponsor         ]
+# 18: [exhilarate      ]
+# 19: [guard           ]
+# 20: [noggin          ]
+# 21: [prologue        ]
+# 22: [seal            ]
+# 23: [seat            ]
+# 24: [tiller          ]
+# 25: [ichthyosaur     ]
+# 26: [lazy            ]
+# 27: [malfeasance     ]
+# 28: [compass         ]
+# 29: [diastase        ]
+# 30: [emperor         ]
+# 31: [history         ]
+# 32: [keep            ]
+# 33: [gangway         ]
+# 34: [labial          ]
+# 35: [sacrament       ]
+# 36: [taint           ]
+# 37: [                ]
+# 38: [                ]
+# 39: [                ]
+# 40: [                ]
+# 41: [                ]
+# 42: [                ]
+# 43: [                ]
+# 44: [                ]
+# 45: [                ]
+# 46: [                ]
+# 47: [                ]
+# 48: [                ]
+# 49: [                ]
+# 50: [                ]
+# 51: [                ]
+# 52: [                ]
+# 53: [                ]
+# 54: [                ]
+# 55: [                ]
+# 56: [                ]
+# 57: [                ]
+# 58: [                ]
+# 59: [                ]
+# 60: [                ]
+# 61: [                ]
+# 62: [                ]
+# 63: [                ]
+# 64: [                ]
+# 65: [Joseph          ]
+# 66: [Kelly           ]
+# 67: [Corey           ]
+# 68: [Adam            ]
+# 69: [Clayton         ]
+# 70: [Dustin          ]
+# 71: [Robert          ]
+# 72: [Kyle            ]
+# 73: [Scott           ]
+# 74: [Octavio         ]
+# 75: [Judy            ]
+# 76: [Derek           ]
+# 77: [Jeffrey         ]
+# 78: [Jordon          ]
+# 79: [Vinnela         ]
+# 80: [Lisa            ]
+# 81: [Todd            ]
+# 82: [Veronica        ]
+# 83: [Matthew         ]
+# 84: [Michael         ]
+# 85: [Akhila          ]
+# 86: [John            ]
+# 87: [Charles         ]
+# 88: [James           ]
+# 89: [Chris           ]
+# 90: [Wade            ]
+# 91: [Christopher     ]
+# 92: [Fernando        ]
+# 93: [Batbold         ]
+# 94: [Joel            ]
+# 95: [Fabulous        ]
+# 96: [Misogamist      ]
+# 97: [Maiden          ]
+# 98: [Eye             ]
+# 99: [Constriction    ]
+#100: [Necromancer     ]
+#101: [Syncopate       ]
+#102: [Yolk            ]
+#103: [Afterwards      ]
+#104: [Person          ]
+#105: [1234567890123456]
+#106: [Northwest       ]
+#107: [Irreversible    ]
+#108: [Fabricate       ]
+#109: [Honor           ]
+#110: [Staple          ]
+#111: [Under           ]
+#112: [Jutty           ]
+#113: [Finagle         ]
+#114: [Cook            ]
+#115: [Rush            ]
+#116: [Wine            ]
+#117: [Screen          ]
+#118: [Perfect         ]
+#119: [mole            ]
+#120: [parasympathetic ]
+#121: [poison          ]
+#122: [brutalize       ]
+#123: [cap             ]
+#124: [cauldron        ]
+#125: [prepossess      ]
+#126: [wince           ]
+#127: [orthodontist    ]
+#128: [live            ]
+Linear Table is 78.13% Full.
+Probing First 30 Keys...
+It took   1 probes to find 1234567890123456
+It took   1 probes to find Joseph          
+It took   2 probes to find Kelly           
+It took   3 probes to find Corey           
+It took   4 probes to find Adam            
+It took   5 probes to find Clayton         
+It took   6 probes to find Dustin          
+It took   7 probes to find Robert          
+It took   8 probes to find Kyle            
+It took   9 probes to find Scott           
+It took  10 probes to find Octavio         
+It took  11 probes to find Judy            
+It took  12 probes to find Derek           
+It took  13 probes to find Jeffrey         
+It took  14 probes to find Jordon          
+It took  15 probes to find Vinnela         
+It took  16 probes to find Lisa            
+It took  17 probes to find Todd            
+It took  18 probes to find Veronica        
+It took  19 probes to find Matthew         
+It took  20 probes to find Michael         
+It took  21 probes to find Akhila          
+It took  22 probes to find John            
+It took  23 probes to find Charles         
+It took  24 probes to find James           
+It took  25 probes to find Chris           
+It took  26 probes to find Wade            
+It took  27 probes to find Christopher     
+It took  28 probes to find Fernando        
+It took  29 probes to find Batbold         
+Probing Last 30 Keys...
+It took  70 probes to find scat            
+It took  71 probes to find toluene         
+It took  72 probes to find wet             
+It took  73 probes to find sparse          
+It took  74 probes to find quandary        
+It took  75 probes to find dactyl          
+It took  76 probes to find nosegay         
+It took  77 probes to find option          
+It took  78 probes to find forgetful       
+It took  80 probes to find privilege       
+It took  81 probes to find sponsor         
+It took  82 probes to find exhilarate      
+It took  83 probes to find guard           
+It took  84 probes to find noggin          
+It took  85 probes to find prologue        
+It took  86 probes to find seal            
+It took  87 probes to find seat            
+It took  88 probes to find tiller          
+It took  89 probes to find ichthyosaur     
+It took  90 probes to find lazy            
+It took  91 probes to find malfeasance     
+It took  92 probes to find compass         
+It took  93 probes to find diastase        
+It took  94 probes to find emperor         
+It took  95 probes to find history         
+It took  96 probes to find keep            
+It took  97 probes to find gangway         
+It took  98 probes to find labial          
+It took  99 probes to find sacrament       
+It took 100 probes to find taint           
+Minimum Probes:   1
+Maximum Probes: 100
+Average Probes: 49.87
+
+Hash Table Contents:
+#  1: [magnetic        ]
+#  2: [inlet           ]
+#  3: [constrain       ]
+#  4: [marsupial       ]
+#  5: [rationalize     ]
+#  6: [scat            ]
+#  7: [toluene         ]
+#  8: [wet             ]
+#  9: [sparse          ]
+# 10: [quandary        ]
+# 11: [dactyl          ]
+# 12: [nosegay         ]
+# 13: [option          ]
+# 14: [forgetful       ]
+# 15: [ratiocination   ]
+# 16: [privilege       ]
+# 17: [sponsor         ]
+# 18: [exhilarate      ]
+# 19: [guard           ]
+# 20: [noggin          ]
+# 21: [prologue        ]
+# 22: [seal            ]
+# 23: [seat            ]
+# 24: [tiller          ]
+# 25: [ichthyosaur     ]
+# 26: [lazy            ]
+# 27: [malfeasance     ]
+# 28: [compass         ]
+# 29: [diastase        ]
+# 30: [emperor         ]
+# 31: [history         ]
+# 32: [keep            ]
+# 33: [gangway         ]
+# 34: [labial          ]
+# 35: [sacrament       ]
+# 36: [taint           ]
+# 37: [withal          ]
+# 38: [oak             ]
+# 39: [preordain       ]
+# 40: [haberdasher     ]
+# 41: [crimp           ]
+# 42: [luculent        ]
+# 43: [pennywort       ]
+# 44: [prevalent       ]
+# 45: [monolith        ]
+# 46: [suffrage        ]
+# 47: [wiper           ]
+# 48: [zygote          ]
+# 49: [academy         ]
+# 50: [amputate        ]
+# 51: [brash           ]
+# 52: [consummation    ]
+# 53: [epicure         ]
+# 54: [indulgent       ]
+# 55: [minute          ]
+# 56: [job             ]
+# 57: [hypodermic      ]
+# 58: [meridian        ]
+# 59: [                ]
+# 60: [                ]
+# 61: [                ]
+# 62: [                ]
+# 63: [                ]
+# 64: [                ]
+# 65: [Joseph          ]
+# 66: [Kelly           ]
+# 67: [Corey           ]
+# 68: [Adam            ]
+# 69: [Clayton         ]
+# 70: [Dustin          ]
+# 71: [Robert          ]
+# 72: [Kyle            ]
+# 73: [Scott           ]
+# 74: [Octavio         ]
+# 75: [Judy            ]
+# 76: [Derek           ]
+# 77: [Jeffrey         ]
+# 78: [Jordon          ]
+# 79: [Vinnela         ]
+# 80: [Lisa            ]
+# 81: [Todd            ]
+# 82: [Veronica        ]
+# 83: [Matthew         ]
+# 84: [Michael         ]
+# 85: [Akhila          ]
+# 86: [John            ]
+# 87: [Charles         ]
+# 88: [James           ]
+# 89: [Chris           ]
+# 90: [Wade            ]
+# 91: [Christopher     ]
+# 92: [Fernando        ]
+# 93: [Batbold         ]
+# 94: [Joel            ]
+# 95: [Fabulous        ]
+# 96: [Misogamist      ]
+# 97: [Maiden          ]
+# 98: [Eye             ]
+# 99: [Constriction    ]
+#100: [Necromancer     ]
+#101: [Syncopate       ]
+#102: [Yolk            ]
+#103: [Afterwards      ]
+#104: [Person          ]
+#105: [1234567890123456]
+#106: [Northwest       ]
+#107: [Irreversible    ]
+#108: [Fabricate       ]
+#109: [Honor           ]
+#110: [Staple          ]
+#111: [Under           ]
+#112: [Jutty           ]
+#113: [Finagle         ]
+#114: [Cook            ]
+#115: [Rush            ]
+#116: [Wine            ]
+#117: [Screen          ]
+#118: [Perfect         ]
+#119: [mole            ]
+#120: [parasympathetic ]
+#121: [poison          ]
+#122: [brutalize       ]
+#123: [cap             ]
+#124: [cauldron        ]
+#125: [prepossess      ]
+#126: [wince           ]
+#127: [orthodontist    ]
+#128: [live            ]
+Linear Table is 95.31% Full.
+Probing First 30 Keys...
+It took   1 probes to find 1234567890123456
+It took   1 probes to find Joseph          
+It took   2 probes to find Kelly           
+It took   3 probes to find Corey           
+It took   4 probes to find Adam            
+It took   5 probes to find Clayton         
+It took   6 probes to find Dustin          
+It took   7 probes to find Robert          
+It took   8 probes to find Kyle            
+It took   9 probes to find Scott           
+It took  10 probes to find Octavio         
+It took  11 probes to find Judy            
+It took  12 probes to find Derek           
+It took  13 probes to find Jeffrey         
+It took  14 probes to find Jordon          
+It took  15 probes to find Vinnela         
+It took  16 probes to find Lisa            
+It took  17 probes to find Todd            
+It took  18 probes to find Veronica        
+It took  19 probes to find Matthew         
+It took  20 probes to find Michael         
+It took  21 probes to find Akhila          
+It took  22 probes to find John            
+It took  23 probes to find Charles         
+It took  24 probes to find James           
+It took  25 probes to find Chris           
+It took  26 probes to find Wade            
+It took  27 probes to find Christopher     
+It took  28 probes to find Fernando        
+It took  29 probes to find Batbold         
+Probing Last 30 Keys...
+It took  93 probes to find diastase        
+It took  94 probes to find emperor         
+It took  95 probes to find history         
+It took  96 probes to find keep            
+It took  97 probes to find gangway         
+It took  98 probes to find labial          
+It took  99 probes to find sacrament       
+It took 100 probes to find taint           
+It took 101 probes to find withal          
+It took 102 probes to find oak             
+It took 103 probes to find preordain       
+It took 104 probes to find haberdasher     
+It took 105 probes to find crimp           
+It took 106 probes to find luculent        
+It took 107 probes to find pennywort       
+It took 108 probes to find prevalent       
+It took 109 probes to find monolith        
+It took 110 probes to find suffrage        
+It took 111 probes to find wiper           
+It took 112 probes to find zygote          
+It took 113 probes to find academy         
+It took 114 probes to find amputate        
+It took 115 probes to find brash           
+It took 116 probes to find consummation    
+It took 117 probes to find epicure         
+It took 118 probes to find indulgent       
+It took 119 probes to find minute          
+It took 120 probes to find job             
+It took 121 probes to find hypodermic      
+It took 122 probes to find meridian        
+Minimum Probes:   1
+Maximum Probes: 122
+Average Probes: 61.02
+
+Hash Table Contents:
+#  1: [inlet           ]
+#  2: [constrain       ]
+#  3: [Robert          ]
+#  4: [Finagle         ]
+#  5: [emperor         ]
+#  6: [Under           ]
+#  7: [marsupial       ]
+#  8: [prepossess      ]
+#  9: [brutalize       ]
+# 10: [malfeasance     ]
+# 11: [live            ]
+# 12: [Kyle            ]
+# 13: [seat            ]
+# 14: [toluene         ]
+# 15: [ratiocination   ]
+# 16: [Michael         ]
+# 17: [Cook            ]
+# 18: [                ]
+# 19: [                ]
+# 20: [gangway         ]
+# 21: [forgetful       ]
+# 22: [history         ]
+# 23: [Wine            ]
+# 24: [                ]
+# 25: [Northwest       ]
+# 26: [Octavio         ]
+# 27: [Jutty           ]
+# 28: [poison          ]
+# 29: [scat            ]
+# 30: [                ]
+# 31: [                ]
+# 32: [rationalize     ]
+# 33: [Maiden          ]
+# 34: [Eye             ]
+# 35: [                ]
+# 36: [Lisa            ]
+# 37: [wince           ]
+# 38: [Jordon          ]
+# 39: [Constriction    ]
+# 40: [Fernando        ]
+# 41: [Chris           ]
+# 42: [cap             ]
+# 43: [Fabulous        ]
+# 44: [                ]
+# 45: [Perfect         ]
+# 46: [Yolk            ]
+# 47: [compass         ]
+# 48: [                ]
+# 49: [Todd            ]
+# 50: [noggin          ]
+# 51: [ichthyosaur     ]
+# 52: [magnetic        ]
+# 53: [Staple          ]
+# 54: [orthodontist    ]
+# 55: [Matthew         ]
+# 56: [option          ]
+# 57: [Scott           ]
+# 58: [                ]
+# 59: [Vinnela         ]
+# 60: [James           ]
+# 61: [Syncopate       ]
+# 62: [tiller          ]
+# 63: [nosegay         ]
+# 64: [Necromancer     ]
+# 65: [Joseph          ]
+# 66: [Kelly           ]
+# 67: [wet             ]
+# 68: [                ]
+# 69: [Batbold         ]
+# 70: [                ]
+# 71: [Corey           ]
+# 72: [                ]
+# 73: [                ]
+# 74: [Wade            ]
+# 75: [                ]
+# 76: [sparse          ]
+# 77: [Akhila          ]
+# 78: [Dustin          ]
+# 79: [cauldron        ]
+# 80: [seal            ]
+# 81: [                ]
+# 82: [Rush            ]
+# 83: [parasympathetic ]
+# 84: [Misogamist      ]
+# 85: [Jeffrey         ]
+# 86: [Joel            ]
+# 87: [                ]
+# 88: [Honor           ]
+# 89: [                ]
+# 90: [dactyl          ]
+# 91: [                ]
+# 92: [                ]
+# 93: [Clayton         ]
+# 94: [mole            ]
+# 95: [Fabricate       ]
+# 96: [Adam            ]
+# 97: [labial          ]
+# 98: [sacrament       ]
+# 99: [Afterwards      ]
+#100: [exhilarate      ]
+#101: [                ]
+#102: [privilege       ]
+#103: [taint           ]
+#104: [diastase        ]
+#105: [1234567890123456]
+#106: [                ]
+#107: [keep            ]
+#108: [Person          ]
+#109: [                ]
+#110: [                ]
+#111: [Christopher     ]
+#112: [Screen          ]
+#113: [guard           ]
+#114: [Veronica        ]
+#115: [Charles         ]
+#116: [                ]
+#117: [                ]
+#118: [                ]
+#119: [prologue        ]
+#120: [Derek           ]
+#121: [quandary        ]
+#122: [Irreversible    ]
+#123: [sponsor         ]
+#124: [lazy            ]
+#125: [                ]
+#126: [John            ]
+#127: [Judy            ]
+#128: [                ]
+Random Table is 78.13% Full.
+Probing First 30 Keys...
+Probing Last 30 Keys...
+Minimum Probes:   1
+Maximum Probes:  99
+Average Probes: 49.18
+
+Hash Table Contents:
+#  1: [inlet           ]
+#  2: [constrain       ]
+#  3: [Robert          ]
+#  4: [Finagle         ]
+#  5: [emperor         ]
+#  6: [Under           ]
+#  7: [marsupial       ]
+#  8: [prepossess      ]
+#  9: [brutalize       ]
+# 10: [malfeasance     ]
+# 11: [live            ]
+# 12: [Kyle            ]
+# 13: [seat            ]
+# 14: [toluene         ]
+# 15: [ratiocination   ]
+# 16: [Michael         ]
+# 17: [Cook            ]
+# 18: [brash           ]
+# 19: [job             ]
+# 20: [gangway         ]
+# 21: [forgetful       ]
+# 22: [history         ]
+# 23: [Wine            ]
+# 24: [monolith        ]
+# 25: [Northwest       ]
+# 26: [Octavio         ]
+# 27: [Jutty           ]
+# 28: [poison          ]
+# 29: [scat            ]
+# 30: [minute          ]
+# 31: [prevalent       ]
+# 32: [rationalize     ]
+# 33: [Maiden          ]
+# 34: [Eye             ]
+# 35: [haberdasher     ]
+# 36: [Lisa            ]
+# 37: [wince           ]
+# 38: [Jordon          ]
+# 39: [Constriction    ]
+# 40: [Fernando        ]
+# 41: [Chris           ]
+# 42: [cap             ]
+# 43: [Fabulous        ]
+# 44: [crimp           ]
+# 45: [Perfect         ]
+# 46: [Yolk            ]
+# 47: [compass         ]
+# 48: [epicure         ]
+# 49: [Todd            ]
+# 50: [noggin          ]
+# 51: [ichthyosaur     ]
+# 52: [magnetic        ]
+# 53: [Staple          ]
+# 54: [orthodontist    ]
+# 55: [Matthew         ]
+# 56: [option          ]
+# 57: [Scott           ]
+# 58: [pennywort       ]
+# 59: [Vinnela         ]
+# 60: [James           ]
+# 61: [Syncopate       ]
+# 62: [tiller          ]
+# 63: [nosegay         ]
+# 64: [Necromancer     ]
+# 65: [Joseph          ]
+# 66: [Kelly           ]
+# 67: [wet             ]
+# 68: [academy         ]
+# 69: [Batbold         ]
+# 70: [wiper           ]
+# 71: [Corey           ]
+# 72: [                ]
+# 73: [meridian        ]
+# 74: [Wade            ]
+# 75: [                ]
+# 76: [sparse          ]
+# 77: [Akhila          ]
+# 78: [Dustin          ]
+# 79: [cauldron        ]
+# 80: [seal            ]
+# 81: [amputate        ]
+# 82: [Rush            ]
+# 83: [parasympathetic ]
+# 84: [Misogamist      ]
+# 85: [Jeffrey         ]
+# 86: [Joel            ]
+# 87: [consummation    ]
+# 88: [Honor           ]
+# 89: [luculent        ]
+# 90: [dactyl          ]
+# 91: [zygote          ]
+# 92: [hypodermic      ]
+# 93: [Clayton         ]
+# 94: [mole            ]
+# 95: [Fabricate       ]
+# 96: [Adam            ]
+# 97: [labial          ]
+# 98: [sacrament       ]
+# 99: [Afterwards      ]
+#100: [exhilarate      ]
+#101: [                ]
+#102: [privilege       ]
+#103: [taint           ]
+#104: [diastase        ]
+#105: [1234567890123456]
+#106: [                ]
+#107: [keep            ]
+#108: [Person          ]
+#109: [indulgent       ]
+#110: [preordain       ]
+#111: [Christopher     ]
+#112: [Screen          ]
+#113: [guard           ]
+#114: [Veronica        ]
+#115: [Charles         ]
+#116: [                ]
+#117: [suffrage        ]
+#118: [                ]
+#119: [prologue        ]
+#120: [Derek           ]
+#121: [quandary        ]
+#122: [Irreversible    ]
+#123: [sponsor         ]
+#124: [lazy            ]
+#125: [oak             ]
+#126: [John            ]
+#127: [Judy            ]
+#128: [withal          ]
+Random Table is 95.31% Full.
+Probing First 30 Keys...
+Probing Last 30 Keys...
+Minimum Probes:   1
+Maximum Probes: 121
+Average Probes: 60.52
+
+==============================================================
+=                  GOOD HASH FUNCTION HERE                   =
+==============================================================
+
+Hash Table Contents:
+#  1: [marsupial       ]
+#  2: [                ]
+#  3: [                ]
+#  4: [malfeasance     ]
+#  5: [                ]
+#  6: [Jordon          ]
+#  7: [mole            ]
+#  8: [                ]
+#  9: [Necromancer     ]
+# 10: [Person          ]
+# 11: [sponsor         ]
+# 12: [seal            ]
+# 13: [seat            ]
+# 14: [prologue        ]
+# 15: [                ]
+# 16: [Charles         ]
+# 17: [                ]
+# 18: [                ]
+# 19: [                ]
+# 20: [cauldron        ]
+# 21: [                ]
+# 22: [Syncopate       ]
+# 23: [compass         ]
+# 24: [                ]
+# 25: [                ]
+# 26: [constrain       ]
+# 27: [Joseph          ]
+# 28: [lazy            ]
+# 29: [Maiden          ]
+# 30: [diastase        ]
+# 31: [Judy            ]
+# 32: [Veronica        ]
+# 33: [Adam            ]
+# 34: [Kyle            ]
+# 35: [Wade            ]
+# 36: [Yolk            ]
+# 37: [John            ]
+# 38: [Christopher     ]
+# 39: [inlet           ]
+# 40: [James           ]
+# 41: [Fernando        ]
+# 42: [ichthyosaur     ]
+# 43: [Todd            ]
+# 44: [brutalize       ]
+# 45: [labial          ]
+# 46: [sacrament       ]
+# 47: [                ]
+# 48: [                ]
+# 49: [Rush            ]
+# 50: [                ]
+# 51: [                ]
+# 52: [sparse          ]
+# 53: [Scott           ]
+# 54: [quandary        ]
+# 55: [option          ]
+# 56: [Northwest       ]
+# 57: [Wine            ]
+# 58: [Michael         ]
+# 59: [Matthew         ]
+# 60: [poison          ]
+# 61: [forgetful       ]
+# 62: [wet             ]
+# 63: [guard           ]
+# 64: [Octavio         ]
+# 65: [orthodontist    ]
+# 66: [Constriction    ]
+# 67: [tiller          ]
+# 68: [history         ]
+# 69: [                ]
+# 70: [                ]
+# 71: [Afterwards      ]
+# 72: [noggin          ]
+# 73: [ratiocination   ]
+# 74: [                ]
+# 75: [                ]
+# 76: [                ]
+# 77: [                ]
+# 78: [                ]
+# 79: [                ]
+# 80: [prepossess      ]
+# 81: [                ]
+# 82: [                ]
+# 83: [Eye             ]
+# 84: [Misogamist      ]
+# 85: [Fabricate       ]
+# 86: [cap             ]
+# 87: [Fabulous        ]
+# 88: [live            ]
+# 89: [Robert          ]
+# 90: [Finagle         ]
+# 91: [Chris           ]
+# 92: [Jutty           ]
+# 93: [Under           ]
+# 94: [Cook            ]
+# 95: [magnetic        ]
+# 96: [Irreversible    ]
+# 97: [Dustin          ]
+# 98: [dactyl          ]
+# 99: [privilege       ]
+#100: [emperor         ]
+#101: [keep            ]
+#102: [gangway         ]
+#103: [1234567890123456]
+#104: [                ]
+#105: [Corey           ]
+#106: [Joel            ]
+#107: [Honor           ]
+#108: [Kelly           ]
+#109: [Perfect         ]
+#110: [Batbold         ]
+#111: [wince           ]
+#112: [rationalize     ]
+#113: [Jeffrey         ]
+#114: [Akhila          ]
+#115: [Screen          ]
+#116: [taint           ]
+#117: [Staple          ]
+#118: [exhilarate      ]
+#119: [nosegay         ]
+#120: [toluene         ]
+#121: [Derek           ]
+#122: [Lisa            ]
+#123: [scat            ]
+#124: [Vinnela         ]
+#125: [                ]
+#126: [                ]
+#127: [Clayton         ]
+#128: [parasympathetic ]
+Linear Table is 78.13% Full.
+Probing First 30 Keys...
+It took   1 probes to find 1234567890123456
+It took   1 probes to find Joseph          
+It took   1 probes to find Kelly           
+It took   1 probes to find Corey           
+It took   1 probes to find Adam            
+It took   1 probes to find Clayton         
+It took   1 probes to find Dustin          
+It took   1 probes to find Robert          
+It took   2 probes to find Kyle            
+It took   1 probes to find Scott           
+It took   1 probes to find Octavio         
+It took   1 probes to find Judy            
+It took   1 probes to find Derek           
+It took   1 probes to find Jeffrey         
+It took   1 probes to find Jordon          
+It took   1 probes to find Vinnela         
+It took   1 probes to find Lisa            
+It took   1 probes to find Todd            
+It took   2 probes to find Veronica        
+It took   1 probes to find Matthew         
+It took   1 probes to find Michael         
+It took   2 probes to find Akhila          
+It took   1 probes to find John            
+It took   1 probes to find Charles         
+It took   1 probes to find James           
+It took   1 probes to find Chris           
+It took   5 probes to find Wade            
+It took   1 probes to find Christopher     
+It took   2 probes to find Fernando        
+It took   1 probes to find Batbold         
+Probing Last 30 Keys...
+It took   1 probes to find scat            
+It took   1 probes to find toluene         
+It took   1 probes to find wet             
+It took   1 probes to find sparse          
+It took   2 probes to find quandary        
+It took   1 probes to find dactyl          
+It took   1 probes to find nosegay         
+It took   4 probes to find option          
+It took  10 probes to find forgetful       
+It took   9 probes to find privilege       
+It took   3 probes to find sponsor         
+It took   1 probes to find exhilarate      
+It took   2 probes to find guard           
+It took   1 probes to find noggin          
+It took   1 probes to find prologue        
+It took   4 probes to find seal            
+It took   5 probes to find seat            
+It took  13 probes to find tiller          
+It took  11 probes to find ichthyosaur     
+It took   1 probes to find lazy            
+It took   1 probes to find malfeasance     
+It took   2 probes to find compass         
+It took   2 probes to find diastase        
+It took   2 probes to find emperor         
+It took  14 probes to find history         
+It took   1 probes to find keep            
+It took   6 probes to find gangway         
+It took   4 probes to find labial          
+It took   8 probes to find sacrament       
+It took   6 probes to find taint           
+Minimum Probes:   1
+Maximum Probes:  14
+Average Probes:  2.62
+
+Hash Table Contents:
+#  1: [marsupial       ]
+#  2: [                ]
+#  3: [                ]
+#  4: [malfeasance     ]
+#  5: [                ]
+#  6: [Jordon          ]
+#  7: [mole            ]
+#  8: [crimp           ]
+#  9: [Necromancer     ]
+# 10: [Person          ]
+# 11: [sponsor         ]
+# 12: [seal            ]
+# 13: [seat            ]
+# 14: [prologue        ]
+# 15: [suffrage        ]
+# 16: [Charles         ]
+# 17: [preordain       ]
+# 18: [minute          ]
+# 19: [job             ]
+# 20: [cauldron        ]
+# 21: [hypodermic      ]
+# 22: [Syncopate       ]
+# 23: [compass         ]
+# 24: [                ]
+# 25: [                ]
+# 26: [constrain       ]
+# 27: [Joseph          ]
+# 28: [lazy            ]
+# 29: [Maiden          ]
+# 30: [diastase        ]
+# 31: [Judy            ]
+# 32: [Veronica        ]
+# 33: [Adam            ]
+# 34: [Kyle            ]
+# 35: [Wade            ]
+# 36: [Yolk            ]
+# 37: [John            ]
+# 38: [Christopher     ]
+# 39: [inlet           ]
+# 40: [James           ]
+# 41: [Fernando        ]
+# 42: [ichthyosaur     ]
+# 43: [Todd            ]
+# 44: [brutalize       ]
+# 45: [labial          ]
+# 46: [sacrament       ]
+# 47: [luculent        ]
+# 48: [academy         ]
+# 49: [Rush            ]
+# 50: [monolith        ]
+# 51: [oak             ]
+# 52: [sparse          ]
+# 53: [Scott           ]
+# 54: [quandary        ]
+# 55: [option          ]
+# 56: [Northwest       ]
+# 57: [Wine            ]
+# 58: [Michael         ]
+# 59: [Matthew         ]
+# 60: [poison          ]
+# 61: [forgetful       ]
+# 62: [wet             ]
+# 63: [guard           ]
+# 64: [Octavio         ]
+# 65: [orthodontist    ]
+# 66: [Constriction    ]
+# 67: [tiller          ]
+# 68: [history         ]
+# 69: [withal          ]
+# 70: [pennywort       ]
+# 71: [Afterwards      ]
+# 72: [noggin          ]
+# 73: [ratiocination   ]
+# 74: [wiper           ]
+# 75: [haberdasher     ]
+# 76: [amputate        ]
+# 77: [brash           ]
+# 78: [consummation    ]
+# 79: [epicure         ]
+# 80: [prepossess      ]
+# 81: [meridian        ]
+# 82: [                ]
+# 83: [Eye             ]
+# 84: [Misogamist      ]
+# 85: [Fabricate       ]
+# 86: [cap             ]
+# 87: [Fabulous        ]
+# 88: [live            ]
+# 89: [Robert          ]
+# 90: [Finagle         ]
+# 91: [Chris           ]
+# 92: [Jutty           ]
+# 93: [Under           ]
+# 94: [Cook            ]
+# 95: [magnetic        ]
+# 96: [Irreversible    ]
+# 97: [Dustin          ]
+# 98: [dactyl          ]
+# 99: [privilege       ]
+#100: [emperor         ]
+#101: [keep            ]
+#102: [gangway         ]
+#103: [1234567890123456]
+#104: [prevalent       ]
+#105: [Corey           ]
+#106: [Joel            ]
+#107: [Honor           ]
+#108: [Kelly           ]
+#109: [Perfect         ]
+#110: [Batbold         ]
+#111: [wince           ]
+#112: [rationalize     ]
+#113: [Jeffrey         ]
+#114: [Akhila          ]
+#115: [Screen          ]
+#116: [taint           ]
+#117: [Staple          ]
+#118: [exhilarate      ]
+#119: [nosegay         ]
+#120: [toluene         ]
+#121: [Derek           ]
+#122: [Lisa            ]
+#123: [scat            ]
+#124: [Vinnela         ]
+#125: [zygote          ]
+#126: [indulgent       ]
+#127: [Clayton         ]
+#128: [parasympathetic ]
+Linear Table is 95.31% Full.
+Probing First 30 Keys...
+It took   1 probes to find 1234567890123456
+It took   1 probes to find Joseph          
+It took   1 probes to find Kelly           
+It took   1 probes to find Corey           
+It took   1 probes to find Adam            
+It took   1 probes to find Clayton         
+It took   1 probes to find Dustin          
+It took   1 probes to find Robert          
+It took   2 probes to find Kyle            
+It took   1 probes to find Scott           
+It took   1 probes to find Octavio         
+It took   1 probes to find Judy            
+It took   1 probes to find Derek           
+It took   1 probes to find Jeffrey         
+It took   1 probes to find Jordon          
+It took   1 probes to find Vinnela         
+It took   1 probes to find Lisa            
+It took   1 probes to find Todd            
+It took   2 probes to find Veronica        
+It took   1 probes to find Matthew         
+It took   1 probes to find Michael         
+It took   2 probes to find Akhila          
+It took   1 probes to find John            
+It took   1 probes to find Charles         
+It took   1 probes to find James           
+It took   1 probes to find Chris           
+It took   5 probes to find Wade            
+It took   1 probes to find Christopher     
+It took   2 probes to find Fernando        
+It took   1 probes to find Batbold         
+Probing Last 30 Keys...
+It took   2 probes to find diastase        
+It took   2 probes to find emperor         
+It took  14 probes to find history         
+It took   1 probes to find keep            
+It took   6 probes to find gangway         
+It took   4 probes to find labial          
+It took   8 probes to find sacrament       
+It took   6 probes to find taint           
+It took  10 probes to find withal          
+It took   1 probes to find oak             
+It took   2 probes to find preordain       
+It took   1 probes to find haberdasher     
+It took   1 probes to find crimp           
+It took  18 probes to find luculent        
+It took  10 probes to find pennywort       
+It took   2 probes to find prevalent       
+It took   2 probes to find monolith        
+It took   3 probes to find suffrage        
+It took  12 probes to find wiper           
+It took  22 probes to find zygote          
+It took   2 probes to find academy         
+It took  31 probes to find amputate        
+It took  38 probes to find brash           
+It took  10 probes to find consummation    
+It took  18 probes to find epicure         
+It took   1 probes to find indulgent       
+It took  13 probes to find minute          
+It took   4 probes to find job             
+It took  15 probes to find hypodermic      
+It took  32 probes to find meridian        
+Minimum Probes:   1
+Maximum Probes:  38
+Average Probes:  5.48
+
+Hash Table Contents:
+#  1: [option          ]
+#  2: [forgetful       ]
+#  3: [                ]
+#  4: [mole            ]
+#  5: [                ]
+#  6: [Jordon          ]
+#  7: [                ]
+#  8: [seat            ]
+#  9: [Necromancer     ]
+# 10: [Person          ]
+# 11: [labial          ]
+# 12: [                ]
+# 13: [nosegay         ]
+# 14: [prologue        ]
+# 15: [Perfect         ]
+# 16: [Charles         ]
+# 17: [quandary        ]
+# 18: [inlet           ]
+# 19: [                ]
+# 20: [cauldron        ]
+# 21: [poison          ]
+# 22: [Syncopate       ]
+# 23: [                ]
+# 24: [Veronica        ]
+# 25: [rationalize     ]
+# 26: [constrain       ]
+# 27: [Joseph          ]
+# 28: [Fabricate       ]
+# 29: [Maiden          ]
+# 30: [                ]
+# 31: [Judy            ]
+# 32: [ichthyosaur     ]
+# 33: [Adam            ]
+# 34: [Kyle            ]
+# 35: [gangway         ]
+# 36: [                ]
+# 37: [John            ]
+# 38: [Christopher     ]
+# 39: [brutalize       ]
+# 40: [James           ]
+# 41: [                ]
+# 42: [sponsor         ]
+# 43: [Todd            ]
+# 44: [                ]
+# 45: [                ]
+# 46: [sacrament       ]
+# 47: [                ]
+# 48: [privilege       ]
+# 49: [Rush            ]
+# 50: [Akhila          ]
+# 51: [guard           ]
+# 52: [sparse          ]
+# 53: [Scott           ]
+# 54: [lazy            ]
+# 55: [tiller          ]
+# 56: [Northwest       ]
+# 57: [Wine            ]
+# 58: [Michael         ]
+# 59: [Matthew         ]
+# 60: [                ]
+# 61: [orthodontist    ]
+# 62: [wet             ]
+# 63: [                ]
+# 64: [Octavio         ]
+# 65: [                ]
+# 66: [Constriction    ]
+# 67: [diastase        ]
+# 68: [Staple          ]
+# 69: [Fernando        ]
+# 70: [Yolk            ]
+# 71: [Afterwards      ]
+# 72: [magnetic        ]
+# 73: [ratiocination   ]
+# 74: [                ]
+# 75: [keep            ]
+# 76: [                ]
+# 77: [history         ]
+# 78: [                ]
+# 79: [seal            ]
+# 80: [prepossess      ]
+# 81: [Cook            ]
+# 82: [malfeasance     ]
+# 83: [Eye             ]
+# 84: [Misogamist      ]
+# 85: [toluene         ]
+# 86: [cap             ]
+# 87: [Fabulous        ]
+# 88: [live            ]
+# 89: [Robert          ]
+# 90: [Finagle         ]
+# 91: [Chris           ]
+# 92: [Jutty           ]
+# 93: [Under           ]
+# 94: [                ]
+# 95: [taint           ]
+# 96: [Irreversible    ]
+# 97: [Dustin          ]
+# 98: [dactyl          ]
+# 99: [emperor         ]
+#100: [                ]
+#101: [noggin          ]
+#102: [                ]
+#103: [1234567890123456]
+#104: [                ]
+#105: [Corey           ]
+#106: [Joel            ]
+#107: [Honor           ]
+#108: [Kelly           ]
+#109: [                ]
+#110: [Batbold         ]
+#111: [wince           ]
+#112: [                ]
+#113: [Jeffrey         ]
+#114: [                ]
+#115: [                ]
+#116: [                ]
+#117: [Wade            ]
+#118: [exhilarate      ]
+#119: [Screen          ]
+#120: [marsupial       ]
+#121: [Derek           ]
+#122: [Lisa            ]
+#123: [scat            ]
+#124: [Vinnela         ]
+#125: [compass         ]
+#126: [                ]
+#127: [Clayton         ]
+#128: [parasympathetic ]
+Random Table is 78.13% Full.
+Probing First 30 Keys...
+Probing Last 30 Keys...
+Minimum Probes:   1
+Maximum Probes:  17
+Average Probes:  2.33
+
+Hash Table Contents:
+#  1: [option          ]
+#  2: [forgetful       ]
+#  3: [                ]
+#  4: [mole            ]
+#  5: [zygote          ]
+#  6: [Jordon          ]
+#  7: [crimp           ]
+#  8: [seat            ]
+#  9: [Necromancer     ]
+# 10: [Person          ]
+# 11: [labial          ]
+# 12: [                ]
+# 13: [nosegay         ]
+# 14: [prologue        ]
+# 15: [Perfect         ]
+# 16: [Charles         ]
+# 17: [quandary        ]
+# 18: [inlet           ]
+# 19: [epicure         ]
+# 20: [cauldron        ]
+# 21: [poison          ]
+# 22: [Syncopate       ]
+# 23: [pennywort       ]
+# 24: [Veronica        ]
+# 25: [rationalize     ]
+# 26: [constrain       ]
+# 27: [Joseph          ]
+# 28: [Fabricate       ]
+# 29: [Maiden          ]
+# 30: [luculent        ]
+# 31: [Judy            ]
+# 32: [ichthyosaur     ]
+# 33: [Adam            ]
+# 34: [Kyle            ]
+# 35: [gangway         ]
+# 36: [                ]
+# 37: [John            ]
+# 38: [Christopher     ]
+# 39: [brutalize       ]
+# 40: [James           ]
+# 41: [job             ]
+# 42: [sponsor         ]
+# 43: [Todd            ]
+# 44: [prevalent       ]
+# 45: [brash           ]
+# 46: [sacrament       ]
+# 47: [oak             ]
+# 48: [privilege       ]
+# 49: [Rush            ]
+# 50: [Akhila          ]
+# 51: [guard           ]
+# 52: [sparse          ]
+# 53: [Scott           ]
+# 54: [lazy            ]
+# 55: [tiller          ]
+# 56: [Northwest       ]
+# 57: [Wine            ]
+# 58: [Michael         ]
+# 59: [Matthew         ]
+# 60: [withal          ]
+# 61: [orthodontist    ]
+# 62: [wet             ]
+# 63: [wiper           ]
+# 64: [Octavio         ]
+# 65: [meridian        ]
+# 66: [Constriction    ]
+# 67: [diastase        ]
+# 68: [Staple          ]
+# 69: [Fernando        ]
+# 70: [Yolk            ]
+# 71: [Afterwards      ]
+# 72: [magnetic        ]
+# 73: [ratiocination   ]
+# 74: [                ]
+# 75: [keep            ]
+# 76: [minute          ]
+# 77: [history         ]
+# 78: [                ]
+# 79: [seal            ]
+# 80: [prepossess      ]
+# 81: [Cook            ]
+# 82: [malfeasance     ]
+# 83: [Eye             ]
+# 84: [Misogamist      ]
+# 85: [toluene         ]
+# 86: [cap             ]
+# 87: [Fabulous        ]
+# 88: [live            ]
+# 89: [Robert          ]
+# 90: [Finagle         ]
+# 91: [Chris           ]
+# 92: [Jutty           ]
+# 93: [Under           ]
+# 94: [consummation    ]
+# 95: [taint           ]
+# 96: [Irreversible    ]
+# 97: [Dustin          ]
+# 98: [dactyl          ]
+# 99: [emperor         ]
+#100: [                ]
+#101: [noggin          ]
+#102: [hypodermic      ]
+#103: [1234567890123456]
+#104: [suffrage        ]
+#105: [Corey           ]
+#106: [Joel            ]
+#107: [Honor           ]
+#108: [Kelly           ]
+#109: [academy         ]
+#110: [Batbold         ]
+#111: [wince           ]
+#112: [amputate        ]
+#113: [Jeffrey         ]
+#114: [monolith        ]
+#115: [indulgent       ]
+#116: [haberdasher     ]
+#117: [Wade            ]
+#118: [exhilarate      ]
+#119: [Screen          ]
+#120: [marsupial       ]
+#121: [Derek           ]
+#122: [Lisa            ]
+#123: [scat            ]
+#124: [Vinnela         ]
+#125: [compass         ]
+#126: [preordain       ]
+#127: [Clayton         ]
+#128: [parasympathetic ]
+Random Table is 95.31% Full.
+Probing First 30 Keys...
+Probing Last 30 Keys...
+Minimum Probes:   1
+Maximum Probes:  48
+Average Probes:  5.95
+

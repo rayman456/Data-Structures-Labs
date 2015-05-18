@@ -1,0 +1,362 @@
+The hash address for '1234567890123456' is:  82
+The hash address for 'Joseph          ' is: 122
+The hash address for 'Kelly           ' is:   4
+The hash address for 'Corey           ' is: 124
+The hash address for 'Adam            ' is:  33
+The hash address for 'Clayton         ' is: 119
+The hash address for 'Dustin          ' is: 109
+The hash address for 'Robert          ' is:   4
+The hash address for 'Kyle            ' is:  43
+The hash address for 'Scott           ' is:   7
+The hash address for 'Octavio         ' is:   5
+The hash address for 'Judy            ' is:  42
+The hash address for 'Derek           ' is: 111
+The hash address for 'Jeffrey         ' is: 124
+The hash address for 'Jordon          ' is: 121
+The hash address for 'Vinnela         ' is: 123
+The hash address for 'Lisa            ' is:  44
+The hash address for 'Todd            ' is:  52
+The hash address for 'Veronica        ' is:   4
+The hash address for 'Matthew         ' is: 117
+The hash address for 'Michael         ' is: 110
+The hash address for 'Akhila          ' is: 109
+The hash address for 'John            ' is:  42
+The hash address for 'Charles         ' is: 111
+The hash address for 'James           ' is: 125
+The hash address for 'Chris           ' is: 118
+The hash address for 'Wade            ' is:  55
+The hash address for 'Christopher     ' is:  62
+The hash address for 'Fernando        ' is: 103
+The hash address for 'Batbold         ' is: 113
+The hash address for 'Joel            ' is:  42
+The hash address for 'Fabulous        ' is: 114
+The hash address for 'Misogamist      ' is:  71
+The hash address for 'Maiden          ' is: 114
+The hash address for 'Eye             ' is:  37
+The hash address for 'Constriction    ' is:  75
+The hash address for 'Necromancer     ' is:  64
+The hash address for 'Syncopate       ' is:  71
+The hash address for 'Yolk            ' is:  57
+The hash address for 'Afterwards      ' is:  55
+The hash address for 'Person          ' is: 127
+The hash address for 'Northwest       ' is:  74
+The hash address for 'Irreversible    ' is:  72
+The hash address for 'Fabricate       ' is:  52
+The hash address for 'Honor           ' is: 122
+The hash address for 'Staple          ' is: 127
+The hash address for 'Under           ' is:   7
+The hash address for 'Jutty           ' is:   3
+The hash address for 'Finagle         ' is: 109
+The hash address for 'Cook            ' is:  35
+The hash address for 'Rush            ' is:  50
+The hash address for 'Wine            ' is:  55
+The hash address for 'Screen          ' is: 120
+The hash address for 'Perfect         ' is: 117
+The hash address for 'mole            ' is:  77
+The hash address for 'parasympathetic ' is:  56
+The hash address for 'poison          ' is:  31
+The hash address for 'brutalize       ' is:  72
+The hash address for 'cap             ' is:  67
+The hash address for 'ratiocination   ' is:  48
+The hash address for 'cauldron        ' is:   7
+The hash address for 'prepossess      ' is: 114
+The hash address for 'wince           ' is:  28
+The hash address for 'orthodontist    ' is: 114
+The hash address for 'live            ' is:  76
+The hash address for 'magnetic        ' is:  18
+The hash address for 'inlet           ' is:  29
+The hash address for 'constrain       ' is: 101
+The hash address for 'marsupial       ' is: 110
+The hash address for 'rationalize     ' is: 106
+The hash address for 'scat            ' is:  83
+The hash address for 'toluene         ' is:  25
+The hash address for 'wet             ' is:  87
+The hash address for 'sparse          ' is:  38
+The hash address for 'quandary        ' is:  21
+The hash address for 'dactyl          ' is:  29
+The hash address for 'nosegay         ' is:  21
+The hash address for 'option          ' is:  30
+The hash address for 'forgetful       ' is:  87
+The hash address for 'privilege       ' is:  94
+The hash address for 'sponsor         ' is:  38
+The hash address for 'exhilarate      ' is: 101
+The hash address for 'guard           ' is:  11
+The hash address for 'noggin          ' is:  23
+The hash address for 'prologue        ' is:  31
+The hash address for 'seal            ' is:  83
+The hash address for 'seat            ' is:  83
+The hash address for 'tiller          ' is:  25
+The hash address for 'ichthyosaur     ' is:  82
+The hash address for 'lazy            ' is:  76
+The hash address for 'malfeasance     ' is:  96
+The hash address for 'compass         ' is:   4
+The hash address for 'diastase        ' is:  24
+The hash address for 'emperor         ' is:  23
+The hash address for 'history         ' is:  23
+The hash address for 'keep            ' is:  75
+The hash address for 'gangway         ' is:  30
+The hash address for 'labial          ' is:  13
+The hash address for 'sacrament       ' is: 104
+The hash address for 'taint           ' is:  40
+The hash address for 'withal          ' is:  24
+The hash address for 'oak             ' is:  79
+The hash address for 'preordain       ' is: 112
+The hash address for 'haberdasher     ' is:  98
+The hash address for 'crimp           ' is:  19
+The hash address for 'luculent        ' is:  24
+The hash address for 'pennywort       ' is: 125
+The hash address for 'prevalent       ' is: 101
+The hash address for 'monolith        ' is:  25
+The hash address for 'suffrage        ' is:  37
+The hash address for 'wiper           ' is:  41
+The hash address for 'zygote          ' is:  46
+The hash address for 'academy         ' is:   6
+The hash address for 'amputate        ' is:  21
+The hash address for 'brash           ' is:  10
+The hash address for 'consummation    ' is: 108
+The hash address for 'epicure         ' is:  26
+The hash address for 'indulgent       ' is: 105
+The hash address for 'minute          ' is:  33
+The hash address for 'job             ' is:  74
+The hash address for 'hypodermic      ' is:  85
+The hash address for 'meridian        ' is:  17
+The hash address for 'sinister        ' is:  38
+The hash address for 'tag             ' is:  84
+The hash address for 'uterus          ' is:  42
+The hash address for 'perennial       ' is: 106
+The hash address for 'humidity        ' is:  12
+The hash address for 'gynecology      ' is:  81
+The hash address for 'forego          ' is:  13
+The hash address for 'interchangeable ' is:  43
+The hash address for 'needle          ' is:  26
+The hash address for 'reach           ' is:  26
+The hash address for 'urban           ' is:  35
+The hash address for 'nonunion        ' is:  28
+The hash address for 'jingle          ' is:  22
+The hash address for 'feculent        ' is:  18
+The hash address for 'deciduous       ' is:  91
+The hash address for 'channel         ' is:  17
+The hash address for 'decimate        ' is:  17
+The hash address for 'alarm           ' is:  14
+The hash address for 'perimeter       ' is: 111
+The hash address for 'unlucky         ' is:  24
+The hash address for 'wonderful       ' is: 104
+The hash address for 'script          ' is:  35
+The hash address for 'particularity   ' is:  51
+The hash address for 'mousse          ' is:  32
+The hash address for 'issue           ' is:  14
+The hash address for 'graduation      ' is: 107
+The hash address for 'neutrality      ' is: 116
+The hash address for 'proxy           ' is:  41
+The hash address for 'swine           ' is:  24
+The hash address for 'witticism       ' is: 109
+The hash address for 'parish          ' is:  35
+The hash address for 'sickly          ' is:  31
+The hash address for 'way             ' is:  87
+The hash address for 'periodic        ' is:  31
+The hash address for 'mail            ' is:  77
+The hash address for 'close           ' is:   8
+The hash address for 'bash            ' is:  66
+The hash address for 'conclusion      ' is:  94
+The hash address for 'drive           ' is:   9
+The hash address for 'foreclose       ' is:  78
+The hash address for 'habituation     ' is: 101
+The hash address for 'liberty         ' is:  30
+The hash address for 'pall            ' is:  80
+The hash address for 'recite          ' is:  38
+The hash address for 'empress         ' is:  10
+The hash address for 'impetuous       ' is: 112
+The hash address for 'ruminate        ' is:  32
+The hash address for 'fork            ' is:  70
+The hash address for 'horizon         ' is:  34
+The hash address for 'prerequisite    ' is: 104
+The hash address for 'romance         ' is:  32
+The hash address for 'sensual         ' is:  40
+The hash address for 'story           ' is:  44
+The hash address for 'tuck            ' is:  84
+The hash address for 'imperialist     ' is: 100
+The hash address for 'great           ' is:  27
+The hash address for 'excite          ' is:  25
+The hash address for 'east            ' is:  69
+The hash address for 'conclave        ' is:  15
+The hash address for 'beast           ' is:  22
+The hash address for 'calico          ' is:   6
+The hash address for 'beggar          ' is:   3
+The hash address for 'article         ' is:   4
+The hash address for 'enemy           ' is:  30
+The hash address for 'chuck           ' is:  14
+The hash address for 'critical        ' is:  12
+The hash address for 'ghost           ' is:  27
+The hash address for 'dispense        ' is:   9
+The hash address for 'figure          ' is:  24
+The hash address for 'algorithm       ' is:  96
+The hash address for 'bile            ' is:  66
+The hash address for 'handsome        ' is:  27
+The hash address for 'cat             ' is:  67
+The hash address for 'ivy             ' is:  73
+The hash address for 'impersonal      ' is:  92
+The hash address for 'pennant         ' is:  17
+The hash address for 'elephant        ' is:  13
+The hash address for 'glycerin        ' is:  12
+The hash address for 'ink             ' is:  73
+The hash address for 'squid           ' is:  23
+The hash address for 'pumpkin         ' is:  27
+The hash address for 'lexicon         ' is:  15
+The hash address for 'mediocrity      ' is: 112
+The hash address for 'meet            ' is:  77
+The hash address for 'alabaster       ' is:  84
+The hash address for 'morning         ' is:  22
+The hash address for 'calculator      ' is: 103
+The hash address for 'speaker         ' is:  30
+The hash address for 'pacify          ' is:  22
+The hash address for 'print           ' is:  36
+The hash address for 'condition       ' is:  90
+The hash address for 'popcorn         ' is:  31
+The hash address for 'spank           ' is:  30
+The hash address for 'moon            ' is:  77
+The hash address for 'quadrant        ' is:  35
+The hash address for 'earthquake      ' is:  88
+The hash address for 'revive          ' is:  40
+The hash address for 'sculpture       ' is: 104
+The hash address for 'misbehave       ' is:  87
+The hash address for 'skeleton        ' is:  24
+The hash address for 'ligament        ' is:  25
+The hash address for 'statute         ' is:  40
+The hash address for 'divisible       ' is:  92
+The hash address for 'document        ' is:  17
+The hash address for 'infant          ' is:  23
+The hash address for 'divot           ' is:  24
+The hash address for 'conspiracy      ' is:  86
+The hash address for 'bunt            ' is:  66
+The hash address for 'notice          ' is:  17
+Keys that addressed to   0:   0
+Keys that addressed to   1:   0
+Keys that addressed to   2:   0
+Keys that addressed to   3:   2
+Keys that addressed to   4:   5
+Keys that addressed to   5:   1
+Keys that addressed to   6:   2
+Keys that addressed to   7:   3
+Keys that addressed to   8:   1
+Keys that addressed to   9:   2
+Keys that addressed to  10:   2
+Keys that addressed to  11:   1
+Keys that addressed to  12:   3
+Keys that addressed to  13:   3
+Keys that addressed to  14:   3
+Keys that addressed to  15:   2
+Keys that addressed to  16:   0
+Keys that addressed to  17:   6
+Keys that addressed to  18:   2
+Keys that addressed to  19:   1
+Keys that addressed to  20:   0
+Keys that addressed to  21:   3
+Keys that addressed to  22:   4
+Keys that addressed to  23:   5
+Keys that addressed to  24:   8
+Keys that addressed to  25:   5
+Keys that addressed to  26:   3
+Keys that addressed to  27:   4
+Keys that addressed to  28:   2
+Keys that addressed to  29:   2
+Keys that addressed to  30:   6
+Keys that addressed to  31:   5
+Keys that addressed to  32:   3
+Keys that addressed to  33:   2
+Keys that addressed to  34:   1
+Keys that addressed to  35:   5
+Keys that addressed to  36:   1
+Keys that addressed to  37:   2
+Keys that addressed to  38:   4
+Keys that addressed to  39:   0
+Keys that addressed to  40:   4
+Keys that addressed to  41:   2
+Keys that addressed to  42:   4
+Keys that addressed to  43:   2
+Keys that addressed to  44:   2
+Keys that addressed to  45:   0
+Keys that addressed to  46:   1
+Keys that addressed to  47:   0
+Keys that addressed to  48:   1
+Keys that addressed to  49:   0
+Keys that addressed to  50:   1
+Keys that addressed to  51:   1
+Keys that addressed to  52:   2
+Keys that addressed to  53:   0
+Keys that addressed to  54:   0
+Keys that addressed to  55:   3
+Keys that addressed to  56:   1
+Keys that addressed to  57:   1
+Keys that addressed to  58:   0
+Keys that addressed to  59:   0
+Keys that addressed to  60:   0
+Keys that addressed to  61:   0
+Keys that addressed to  62:   1
+Keys that addressed to  63:   0
+Keys that addressed to  64:   1
+Keys that addressed to  65:   0
+Keys that addressed to  66:   3
+Keys that addressed to  67:   2
+Keys that addressed to  68:   0
+Keys that addressed to  69:   1
+Keys that addressed to  70:   1
+Keys that addressed to  71:   2
+Keys that addressed to  72:   2
+Keys that addressed to  73:   2
+Keys that addressed to  74:   2
+Keys that addressed to  75:   2
+Keys that addressed to  76:   2
+Keys that addressed to  77:   4
+Keys that addressed to  78:   1
+Keys that addressed to  79:   1
+Keys that addressed to  80:   1
+Keys that addressed to  81:   1
+Keys that addressed to  82:   2
+Keys that addressed to  83:   3
+Keys that addressed to  84:   3
+Keys that addressed to  85:   1
+Keys that addressed to  86:   1
+Keys that addressed to  87:   4
+Keys that addressed to  88:   1
+Keys that addressed to  89:   0
+Keys that addressed to  90:   1
+Keys that addressed to  91:   1
+Keys that addressed to  92:   2
+Keys that addressed to  93:   0
+Keys that addressed to  94:   2
+Keys that addressed to  95:   0
+Keys that addressed to  96:   2
+Keys that addressed to  97:   0
+Keys that addressed to  98:   1
+Keys that addressed to  99:   0
+Keys that addressed to 100:   1
+Keys that addressed to 101:   4
+Keys that addressed to 102:   0
+Keys that addressed to 103:   2
+Keys that addressed to 104:   4
+Keys that addressed to 105:   1
+Keys that addressed to 106:   2
+Keys that addressed to 107:   1
+Keys that addressed to 108:   1
+Keys that addressed to 109:   4
+Keys that addressed to 110:   2
+Keys that addressed to 111:   3
+Keys that addressed to 112:   3
+Keys that addressed to 113:   1
+Keys that addressed to 114:   4
+Keys that addressed to 115:   0
+Keys that addressed to 116:   1
+Keys that addressed to 117:   2
+Keys that addressed to 118:   1
+Keys that addressed to 119:   1
+Keys that addressed to 120:   1
+Keys that addressed to 121:   1
+Keys that addressed to 122:   2
+Keys that addressed to 123:   1
+Keys that addressed to 124:   2
+Keys that addressed to 125:   2
+Keys that addressed to 126:   0
+Keys that addressed to 127:   2
+Average # of collisions:   1.82
+Minimum # of collisions:           0
+Maximum # of collisions:           8

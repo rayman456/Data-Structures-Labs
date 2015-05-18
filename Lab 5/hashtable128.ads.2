@@ -1,0 +1,61 @@
+generic
+   type ITEM is private;
+
+   with function GetHash (
+         Key : in     ITEM)
+     return Long_Integer;
+
+package HashTable128 is
+
+   type HashTable128 is tagged private;
+
+   type LinearHashTable128 is new HashTable128 with private;
+
+   type RandomHashTable128 is new HashTable128 with private;
+
+   procedure InsertLinearProbe (
+         Table        : in out LinearHashTable128;
+         Key          : in     ITEM;
+         Percent_Full :    out Float);
+
+   procedure InsertRandomProbe (
+         Table        : in out RandomHashTable128;
+         Key          : in     ITEM;
+         Percent_Full :    out Float);
+
+   procedure SearchLinearProbe (
+         Table            : in out LinearHashTable128;
+         Key              : in     ITEM;
+         Number_Of_Probes :    out Integer);
+
+   procedure SearchRandomProbe (
+         Table            : in out RandomHashTable128;
+         Key              : in     ITEM;
+         Number_Of_Probes :    out Integer);
+
+   procedure PrintTable (
+         Table : in     HashTable128'Class);
+
+private
+
+   type Hash_Array128 is array (Long_Integer range 1 .. 128) of ITEM;
+
+   type HashTable128 is tagged
+      record
+         Table : Hash_Array128;
+         Count : Integer       := 0;
+      end record;
+
+   type LinearHashTable128 is new HashTable128 with null record;
+   type RandomHashTable128 is new HashTable128 with null record;
+
+   type RandomAddress is
+      record
+         Seed : Integer;
+      end record;
+
+   procedure NextAddress (
+         RandomAdress : in out);
+
+end HashTable128;
+

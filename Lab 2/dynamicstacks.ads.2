@@ -1,0 +1,32 @@
+generic
+
+   type ITEM is private;
+
+   Lo : Integer;
+
+   M : Integer;
+
+   F : Integer;
+
+   R : Integer;
+
+   N : Integer;
+
+   EqualAllocate : Float;
+
+   Minimum : Float;
+
+package DynamicStacks is
+
+   procedure Setup;
+
+   procedure Push (
+         K     : in     Integer;
+         Thing : in     ITEM);
+
+   procedure Pop (
+         K     : in     Integer;
+         Thing :    out ITEM);
+
+end DynamicStacks;
+

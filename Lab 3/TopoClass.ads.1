@@ -1,0 +1,43 @@
+generic
+   type ITEM is
+         (<>);
+
+   with procedure Get (
+         Thing :    out ITEM);
+
+   with procedure Put (
+         Thing : in     ITEM);
+
+package TopoClass is
+
+   type Topological_Sort(<>) is tagged private;
+
+   function GenerateTopo (
+         Number : Integer)
+     return Topological_Sort;
+
+   procedure AddPartialOrder (
+         Topo   : in out Topological_Sort;
+         Before : in     ITEM;
+         After  : in     ITEM);
+
+   procedure TopologicalSort (
+         Topo : in     Topological_Sort);
+
+private
+   type Node;
+   type NodePt is access Node;
+   type Node is
+      record
+         Info : ITEM;
+         Next : NodePt;
+   end record;
+
+   type Topological_Sort(Num : Integer) is tagged
+      record
+         Na    : Integer := Num;
+         QLink : array(ITEM'Val(0)..ITEM'Val(Num)) of ITEM := (others => ITEM'Val(0));
+         Count : array(ITEM'Val(0)..ITEM'Val(Num)) of Integer := (others => 0);
+         Top   : array(ITEM'Val(0)..ITEM'Val(Num)) of NodePt := (others => null);
+      end record;
+end TopoClass;

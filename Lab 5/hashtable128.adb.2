@@ -1,0 +1,182 @@
+with Ada.Text_IO;
+with Ada.Direct_IO;
+
+package body HashTable128 is
+
+   function GetAddress128 (
+         RA : in     RandomAddress128)
+     return Long_Integer is
+   begin
+      return (RA.Address / 4) + 1;
+   end GetAddress128;
+
+   procedure NextAddress128 (
+         RA : in out RandomAddress128) is
+   begin
+      RA.Address := RA.Address * 5;
+      RA.Address := RA.Address mod 512;
+   end NextAddress128;
+
+   procedure SetupHashTable (
+         HashTable           : in out HashTable128'Class;
+         Table_Name          : in     String;
+         Default_Table_Value : in     ITEM) is
+      package Io_Direct is new Ada.Direct_IO(ITEM);
+      use Io_Direct;
+      File : File_Type;
+   begin
+      HashTable.Empty := Default_Table_Value;
+      HashTable.Table := Table_Name;
+      Create(File, Inout_File, HashTable.Table);
+      for I in Positive_Count range 1..128 loop
+         Write(File, Default_Table_Value, I);
+      end loop;
+      Close(File);
+   end SetupHashTable;
+
+   procedure EraseHashTable (
+         HashTable : in out HashTable128'Class) is
+      package Io_Direct is new Ada.Direct_IO(ITEM);
+      use Io_Direct;
+      File : File_Type;
+   begin
+      Open(File, Inout_File, HashTable.Table);
+      Delete(File);
+      HashTable.Table := "&&&&&";
+      HashTable.Count := 0;
+   end EraseHashTable;
+
+   procedure InsertLinearProbe (
+         HashTable    : in out LinearHashTable128;
+         Key          : in     ITEM;
+         Percent_Full :    out Float) is
+      package Io_Direct is new Ada.Direct_IO(ITEM);
+      use Io_Direct;
+      File : File_Type;
+      Address : Long_Integer;
+      Table_Val : ITEM;
+   begin
+      Open(File, Inout_file, HashTable.Table);
+      Address := GetHash(Key);
+      Read(File, Table_Val, Positive_Count(Address));
+      if Table_Val = HashTable.Empty then
+         Write(File, Key, Positive_Count(Address));
+         HashTable.Count := HashTable.Count + 1;
+      else
+         --Handle Collision
+         loop
+            Address := (Address mod 128) + 1;
+            Read(File, Table_Val, Positive_Count(Address));
+            exit when Table_Val = HashTable.Empty or Address = GetHash(Key);
+         end loop;
+         if Address /= GetHash(Key) then
+            Write(File, Key, Positive_Count(Address));
+            HashTable.Count := HashTable.Count + 1;
+         end if;
+      end if;
+      Percent_Full := Float(HashTable.Count) / 128.0;
+      Close(File);
+   end InsertLinearProbe;
+
+   procedure InsertRandomProbe (
+         HashTable    : in out RandomHashTable128;
+         Key          : in     ITEM;
+         Percent_Full :    out Float) is
+      package Io_Direct is new Ada.Direct_IO(ITEM);
+      use Io_Direct;
+      File : File_Type;
+      Address : RandomAddress128 (GetHash (Key));
+      Table_Val : ITEM;
+   begin
+      Open(File, Inout_File, HashTable.Table);
+      Read(File, Table_Val, Positive_Count(GetAddress128(Address)));
+      if Table_Val = HashTable.Empty then
+         Write(File, Key, Positive_Count(GetAddress128(Address)));
+         HashTable.Count := HashTable.Count + 1;
+      else
+         loop
+            NextAddress128(Address);
+            Read(File, Table_Val, Positive_Count(GetAddress128(Address)));
+            exit when Table_Val = HashTable.Empty or GetAddress128(Address) = GetHash(Key);
+         end loop;
+         if GetAddress128(Address) /= GetHash(Key) then
+            Write(File, Key, Positive_Count(GetAddress128(Address)));
+            HashTable.Count := HashTable.Count + 1;
+         end if;
+      end if;
+      Percent_Full := Float(HashTable.Count) / 128.0;
+      Close(File);
+   end InsertRandomProbe;
+
+   procedure SearchLinearProbe (
+         HashTable        : in out LinearHashTable128;
+         Key              : in     ITEM;
+         Number_Of_Probes :    out Integer) is
+      package Io_Direct is new Ada.Direct_IO(ITEM);
+      use Io_Direct;
+      File : File_Type;
+      Table_Val : ITEM;
+      Address : Long_Integer;
+   begin
+      Address := GetHash(Key);
+      Open(File, Inout_File, HashTable.Table);
+      Read(File, Table_Val, Positive_Count(Address));
+      Number_Of_Probes := 1;
+      if Table_Val = Key or Table_Val = HashTable.Empty then
+         --Key was found or does not exist, 1 probe
+         return;
+      else
+         --Search for key until we are at key or empty spot
+         Number_Of_Probes := 2;
+         loop
+            Address := (Address mod 128) + 1;
+            Read(File, Table_Val, Positive_Count(Address));
+            exit when Table_Val = HashTable.Empty or Table_Val = Key or Address = GetHash(Key);
+            Number_Of_Probes := Number_Of_Probes + 1;
+         end loop;
+      end if;
+      Close(File);
+   end SearchLinearProbe;
+
+   procedure SearchRandomProbe (
+         HashTable        : in out RandomHashTable128;
+         Key              : in     ITEM;
+         Number_Of_Probes :    out Integer) is
+      package Io_Direct is new Ada.Direct_IO(ITEM);
+      use Io_Direct;
+      File : File_Type;
+      Table_Val : ITEM;
+      Address : RandomAddress128 (GetHash (Key));
+   begin
+      Open(File, Inout_File, HashTable.Table);
+      Read(File, Table_Val, Positive_Count(GetAddress128(Address)));
+      Number_Of_Probes := 1;
+      if Table_Val = Key or Table_Val) = HashTable.Empty then
+         return;
+      else
+         Number_Of_Probes := 2;
+         loop
+            NextAddress128(Address);
+            Read(File, Table_Val, Positive_Count(GetAddress128(Address)));
+            exit when Table_Val = HashTable.Empty or Read(File, Table_Val, Positive_Count(GetAddress128(Address))); = Key or GetAddress128(Address) = GetHash(Key);
+            Number_Of_Probes := Number_Of_Probes + 1;
+         end loop;
+      end if;
+   end SearchRandomProbe;
+
+   procedure PrintTable (
+         HashTable : in     HashTable128'Class) is
+      package Long_Int_IO is new Ada.Text_IO.Integer_IO(Long_Integer);
+      use Long_Int_IO;
+   begin
+      Ada.Text_IO.Put_Line("Hash Table Contents:");
+      for I in Long_Integer range 1..128 loop
+         Ada.Text_IO.Put("#");
+         Put(I, 3);
+         Ada.Text_IO.Put(": [");
+         Put(HashTable.Table(I));
+         Ada.Text_IO.Put_Line("]");
+      end loop;
+   end PrintTable;
+
+end HashTable128;

@@ -1,0 +1,57 @@
+procedure Reallocate (
+      Top           : in out INT_ARRAY;
+      OldTop        : in out INT_ARRAY;
+      Base          : in out INT_ARRAY;
+      StackSpace    : in out ITEM_ARRAY;
+      MinimumSpace  : in     Float;
+      EqualAllocate : in     Float;
+      StackNum      : in     Integer;
+      Thing         : in     ITEM) is
+   N              : Integer                   := Top'Length;
+   AvailSpace      : Integer;
+   Totallnc       : Integer;
+   J              : Integer                   := N;
+   GrowthAllocate : Float;
+   Alpha          : Float;
+   Beta           : Float;
+   Tau            : Float;
+   Sigma          : Float;
+   Growth         : array (1 .. N) of Integer;
+   NewBase        : array (1 .. N) of Integer;
+begin
+   AvailSpace := Base(N+1) - Base(1);
+   Totallnc := 0;
+   while J > 0 loop
+      AvailSpace := AvailSpace - (Top(J) - Base(J));
+      if Top(J) > OldTop(J) then
+         Growth(J) := Top(J) - OldTop(J);
+         Totallnc := Totallnc + Growth(J);
+      else
+         Growth(J) := 0;
+      end if;
+      J := J - 1;
+   end loop;
+   if Float(AvailSpace) < ((Float(AvailSpace) * MinimumSpace) - 1.0) then
+      --not enough memory
+      return;
+   end if;
+   GrowthAllocate := 1.0 - EqualAllocate;
+   Alpha := (EqualAllocate * Float(AvailSpace)) / Float(N);
+   Beta := GrowthAllocate * Float(AvailSpace) / Float(Totallnc);
+   NewBase(1) := Base(1);
+   Sigma := 0.0;
+   for I in 2..N loop
+      Tau := Sigma + Alpha + (Float(Growth(I - 1)) * Beta);
+      NewBase(I) := NewBase(I - 1) + (Top(I - 1) - Base(I - 1)) + Integer(Float'Floor(Tau)) - Integer(Float'Floor(Sigma));
+      Sigma := Tau;
+   end loop;
+   Top(StackNum) := Top(StackNum) - 1;
+   --MoveStack Begin
+   --MoveStack End
+   Top(StackNum) := Top(StackNum) + 1;
+   StackSpace(Top(StackNum)) := Thing;
+   for X in 1..N loop
+      OldTop(X) := Top(X);
+   end loop;
+end Reallocate;
+

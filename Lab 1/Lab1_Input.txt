@@ -1,0 +1,41 @@
+C
+20
+Joe;
+moT;
+Betty;
+pop;
+pop;
+pop;
+pop;
+Larry;
+Sarah;
+Bob;
+pop;
+Harold;
+Sue;
+exit;
+I
+15
+10 25 3 46 0;
+pop;
+32 12 456 7 9 0;
+5 17 0;
+3 0;
+42 23 67 0;
+pop;
+pop;
+32 22 56 78 54 6 17 0;
+exit;
+D
+8
+January 15 1952 February 23 1492 September 1 2004 end;
+October 12 2003 end;
+February 4 1777 December 24 2003 June 12 2004 end;
+pop;
+pop;
+pop;
+pop;
+September 17 1623 August 11 2002 end;
+pop;
+exit;
+done

@@ -1,0 +1,617 @@
+with Ada.Text_IO;
+use Ada.Text_IO;
+with Ada.Unchecked_Deallocation;
+
+package body BinarySearchTree is
+
+   --constructor
+   procedure MakeEmptyBinarySearchTree (
+         Newtree : in out BinarySearchTreePoint;
+         Name    : in     AKey;
+         Phone   : in     AKey) is
+   begin
+      NewTree := new Node'(LTag => False, RTag => True, LLink => null, RLink => null, Info => NewCustomer(Name, Phone));
+      NewTree.LLink := NewTree;
+      NewTree.RLink := Newtree;
+   end;
+
+   function IsNull (
+         Tree : in     BinarySearchTreePoint)
+     return Boolean is
+   begin
+      return Tree = null;
+   end IsNull;
+
+   function TreeSize (
+         Tree : in     BinarySearchTreePoint)
+     return Integer is
+      LChild : Integer               := 0;
+      RChild : Integer               := 0;
+      P      : BinarySearchTreePoint := Tree;
+   begin
+      if Tree.RTag = True and Tree.RLink = Tree then
+         if Tree.LTag = True then
+            P := P.LLink;
+         else
+            return 0;
+         end if;
+      end if;
+      if P.LTag = True then
+         LChild := TreeSize(P.LLink);
+      end if;
+      if P.RTag = True then
+         RChild := TreeSize(P.RLink);
+      end if;
+      return 1 + LChild + RChild;
+   end TreeSize;
+
+   --C
+   procedure InsertBinarySearchTree (
+         Root      : in out BinarySearchTreePoint;
+         CustName  : in     Akey;
+         CustPhone : in     Akey) is
+      P : BinarySearchTreePoint;
+      Q : BinarySearchTreePoint;
+   begin
+      if Root.Ltag = False then
+         Q := new Node'(LTag => False, RTag => False, LLink => Root, RLink => Root, Info => NewCustomer(CustName, CustPhone));
+         Root.LLink := Q;
+         Root.LTag := True;
+      else
+         P := Root.LLink;
+         loop
+            if CustName < P.Info then
+               if P.LTag = True then
+                  P := P.LLink;
+               else
+                  Q := new Node'(LTag => False, RTag => False, LLink => null, RLink => null, Info => NewCustomer(CustName, CustPhone));
+                  Q.LLink := P.LLink;
+                  P.LLink := Q;
+                  P.LTag := True;
+                  Q.RLink := P;
+                  exit;
+               end if;
+            elsif CustName > P.Info or CustName = P.Info then
+               if P.RTag = True then
+                  P := P.RLink;
+               else
+                  Q := new Node'(LTag => False, RTag => False, LLink => null, RLink => null, Info => NewCustomer(CustName, CustPhone));
+                  Q.RLink := P.RLink;
+                  P.RLink := Q;
+                  P.RTag := True;
+                  Q.LLink := P;
+                  exit;
+               end if;
+            end if;
+         end loop;
+      end if;
+   end InsertBinarySearchTree;
+
+   procedure FindCustomerIterative (
+         Root          : in     BinarySearchTreePoint;
+         CustomerName  : in     Akey;
+         CustomerPoint :    out BinarySearchTreePoint) is
+      P : BinarySearchTreePoint;
+   begin
+      if Root.LTag = False then
+         CustomerPoint := null;
+         return;
+      end if;
+      P := Root.LLink;
+      loop
+         if CustomerName = P.Info then
+            CustomerPoint := P;
+            exit;
+         else
+            if CustomerName < P.Info then
+               if P.LTag = True then
+                  P := P.LLink;
+               else
+                  CustomerPoint := null;
+                  exit;
+               end if;
+            elsif CustomerName > P.Info then
+               if P.RTag = True then
+                  P := P.RLink;
+               else
+                  CustomerPoint := null;
+                  exit;
+               end if;
+            end if;
+         end if;
+      end loop;
+   end FindCustomerIterative;
+
+   procedure FindCustomerRecursive (
+         Root          : in     BinarySearchTreePoint;
+         CustomerName  : in     Akey;
+         CustomerPoint :    out BinarySearchTreePoint) is
+      P : BinarySearchTreePoint;
+   begin
+      P := Root;
+      if P.RTag = True and P.RLink = P then
+         if P.LTag = False then
+            CustomerPoint := null;
+            return;
+         end if;
+         P := P.LLink;
+      end if;
+      if CustomerName < P.Info then
+         if P.LTag = True then
+            FindcustomerRecursive(P.LLink, CustomerName, CustomerPoint);
+         else
+            CustomerPoint := null;
+            return;
+         end if;
+      elsif CustomerName > P.Info then
+         if P.RTag = True then
+            FindcustomerRecursive(P.RLink, CustomerName, CustomerPoint);
+         else
+            CustomerPoint := null;
+            return;
+         end if;
+      else
+         CustomerPoint := P;
+      end if;
+   end FindCustomerRecursive;
+
+   function InOrderSuccessor (
+         TreePoint : in     BinarySearchTreePoint)
+     return BinarySearchTreePoint is
+      Q : BinarySearchTreePoint;
+   begin
+      Q := TreePoint.RLink;
+      if TreePoint.RTag = False then
+         if Q.RLink = Q then
+            while Q.LTag = True loop
+               Q := Q.LLink;
+            end loop;
+         end if;
+      else
+         while Q.LTag = True loop
+            Q := Q.LLink;
+         end loop;
+      end if;
+      return Q;
+   end InOrderSuccessor;
+
+   function CustomerName (
+         TreePoint : in     BinarySearchTreePoint)
+     return Akey is
+   begin
+      return GetName(TreePoint.Info);
+   end CustomerName;
+
+   function CustomerPhone (
+         TreePoint : in     BinarySearchTreePoint)
+     return Akey is
+   begin
+      return GetPhone(TreePoint.Info);
+   end CustomerPhone;
+
+   --B
+   procedure DeleteRandomNode (
+         Tree        : in     BinarySearchTreePoint;
+         DeletePoint : in out BinarySearchTreePoint) is
+      P : BinarySearchTreePoint;
+      Q : BinarySearchTreePoint;
+      R : BinarySearchTreePoint;
+      S : BinarySearchTreePoint;
+      T : BinarySearchTreePoint;
+      procedure FreeNode is
+      new Ada.Unchecked_Deallocation(Node, BinarySearchTreePoint);
+      type DeleteType is
+            (Left,
+             Right);
+      DT : DeleteType;
+   begin
+      --Do nothing if either pointer is null or tree is empty.
+      if (Tree = null or DeletePoint = null) or else Tree.LTag = False then
+         return;
+      end if;
+      --Setup P and Q.
+      P := Tree;
+      Q := Tree.LLink;
+      DT := Left;
+      --If setup is immediately correct, do nothing...
+      if CustomerName(DeletePoint) = Q.Info then
+         null;
+      else
+         --Otherwise move P and Q until they are correct.
+         loop
+            --PreStep: Move P down to Q. Q will be a child of P by the end of the loop.
+            P := Q;
+            --2 steps:
+            --1. Move Q in the direction of the node to delete.
+            --2. Check if it has landed on the node to delete. If so, change direction accordingly and exit the loop.
+            if CustomerName(DeletePoint) < Q.Info then
+               Q := Q.LLink;
+               if CustomerName(DeletePoint) = Q.Info then
+                  exit;
+               end if;
+            else
+               Q := Q.RLink;
+               if CustomerName(DeletePoint) = Q.Info then
+                  DT := Right;
+                  exit;
+               end if;
+            end if;
+         end loop;
+      end if;
+      --Change pointers so deletion will not mess anything up.
+      --The pointers to change depend on Q's children (if any).
+      --First we handle cases were Q has no successor:
+      if Q.RTag = False then
+         if Q.LTag = True then
+            --Q has a right thread and a left child.
+            --In this case, P must be repointed to Q's left child
+            --and Q's Predeccessor must be repointed to Q's successor.
+            T := Q.LLink;
+            while T.RTag = True loop
+               T := T.RLink;
+            end loop;
+            --T is now Q's in-order predeccessor
+            T.RLink := Q.RLink;
+            --Repoint P to Q's left/right child. The direction changes
+            --based on if Q is a left or right child of P.
+            if DT = Left then
+               P.LLink := Q.LLink;
+            else
+               P.RLink := Q.LLink;
+            end if;
+         else
+            --Q has two threads (Q is a leaf).
+            --In this case, P's left or right pointer
+            --must become a thread and take over Q's
+            --corresponding left/right thread.
+            --The direction depends on if Q if a left or right child of P.
+            if DT = Left then
+               P.LLink := Q.LLink;
+               P.LTag := False;
+            elsif DT = Right then
+               P.RLink := Q.RLink;
+               P.RTag := False;
+            end if;
+         end if;
+      else
+         --Next we handle the cases where Q has a successor:
+         --Q has a right child.
+         --In this case, the successor to Q must replace Q's position.
+         --How to do this changes based on if Q's right child has any left children.
+         --(This would mean Q's right child is not its successor.)
+         R := Q.RLink;
+         if R.LTag = False then
+            --Q's right child has a left Thread.
+            --In this case, we directly replace Q with R
+            --because R is the successor.
+            R.LLink := Q.LLink;
+            R.LTag := Q.LTag;
+            --R is now Q
+            --Now we need to repoint Q's predeccessor thread if Q had any left children.
+            if R.LTag = True then
+               T := R.LLink;
+               while T.RTag = True loop
+                  T := T.RLink;
+               end loop;
+               --T is now Q's predeccessor
+               T.RLink := R;
+            end if;
+            --Finally, we repoint P to R to complete
+            --the takeover. The direction depends on
+            --if Q is a left or right child of P.
+            if DT = Left then
+               P.LLink := R;
+            else
+               P.RLink := R;
+            end if;
+         else
+            --Q's right child has a left child.
+            --In this case, R is not the successor, so we instead
+            --find the successor as S, and the successor's parent as R.
+            loop
+               S := R.LLink;
+               if S.LTag = False then
+                  exit;
+               end if;
+               R := S;
+            end loop;
+            --S is now Q's Successor and R is S's parent.
+            --The way to replace Q with S changes based on if
+            --S has any right children. If it does, that child
+            --must take the spot of S. Otherwise, R's left link
+            --will become a thread when Q is replaced with S, so R's
+            --left tag must be changed.
+            if S.RTag = True then
+               --S has a right child, change R's left link
+               R.LLink := S.RLink;
+            else
+               --S has a right thread, change R's left tag
+               R.LTag := False;
+            end if;
+            --Begin to move S into Q
+            S.LLink := Q.LLink;
+            --Update S's left tag and the predeccesor thread of Q
+            --if Q had any left children
+            if Q.LTag = True then
+               T := Q.LLink;
+               while T.RTag = True loop
+                  T := T.RLink;
+               end loop;
+               --T is now the predeccesor to Q
+               T.RLink := S;
+               S.LTag := True;
+            end if;
+            --Next, point S's right link to Q's right child and change the tag
+            S.RLink := Q.RLink;
+            S.RTag := True;
+            --Finally, point P to S to complete the takeover.            --The Direction depends on if Q is a left or right child of P.
+            if DT = Left then
+               P.LLink := S;
+            else
+               P.RLink := S;
+            end if;
+         end if;
+      end if;
+      --Delete the node.
+      --All possible dangling pointer issues have been covered so no extra steps are required.
+      Put("Deleting entry: [");
+      Put(CustomerName(DeletePoint));
+      Put(",");
+      Put(CustomerPhone(DeletePoint));
+      Put_Line("]");
+      FreeNode(DeletePoint);
+   end DeleteRandomNode;
+
+   procedure DeleteRandomNode2 (
+         Tree        : in     BinarySearchTreePoint;
+         DeletePoint : in out BinarySearchTreePoint) is
+      P : BinarySearchTreePoint;
+      Q : BinarySearchTreePoint;
+      R : BinarySearchTreePoint;
+      S : BinarySearchTreePoint;
+      T : BinarySearchTreePoint;
+      procedure FreeNode is
+      new Ada.Unchecked_Deallocation(Node, BinarySearchTreePoint);
+      type DeleteType is
+            (Left,
+             Right,
+             Root);
+      DT : DeleteType;
+   begin
+      --Do nothing if either pointer is null or tree is empty.
+      if (Tree = null or DeletePoint = null) or else Tree.LTag = False then
+         return;
+      end if;
+      --Setup P and Q.
+      P := Tree;
+      Q := Tree.LLink;
+      DT := Left;
+      --If setup is immediately correct, do nothing...
+      if CustomerName(DeletePoint) = Q.Info then
+         DT := Root;
+      else
+         --Otherwise move P and Q until they are correct.
+         loop
+            --PreStep: Move P down to Q. Q will be a child of P by the end of the loop.
+            P := Q;
+            --Two steps:
+            --1. Move Q in the direction of the node to delete.
+            --2. Check if it has landed on the node to delete. If so, change direction accordingly and exit the loop.
+            if CustomerName(DeletePoint) < Q.Info then
+               Q := Q.LLink;
+               if CustomerName(DeletePoint) = Q.Info then
+                  exit;
+               end if;
+            else
+               Q := Q.RLink;
+               if CustomerName(DeletePoint) = Q.Info then
+                  DT := Right;
+                  exit;
+               end if;
+            end if;
+         end loop;
+      end if;
+      --Begin Deletion
+      T  := Q;
+      if T.RTag = False then
+         if T.LTag = True then
+            Q := T.LLink;
+            while Q.RTag = True loop
+               Q := R.LLink;
+            end loop;
+            Q.RLink := T.RLink;
+            Q := T.LLink;
+            --Delete T
+         else
+            if DT = Root or DT = Left then
+               Q := Q.LLink;
+               P.LTag := False;
+            else
+               Q := Q.RLink;
+               P.RTag := False;
+            end if;
+            --Delete T
+         end if;
+      else
+         if T.LTag = False then
+            --T has no left children and a right child
+            R := T.RLink;
+            if R.LTag = False then
+               R.LLink := T.LLink;
+               Q := R;
+               --Delete T
+            else
+               S := R.LLink;
+               while S.LTag /= False loop
+                  R := S;
+                  S := R.LLink;
+               end loop;
+
+            else
+               R := T.RLink;
+               if R.LTag = False then
+                  R.LLink := T.LLink;
+                  Q := R;
+                  --Delete T
+               else
+                  S := R.LLink;
+                  while S.LTag /= False loop
+                     R := S;
+                     S := R.LLink;
+                  end loop;
+                  S.LLink := T.LLink;
+                  R.LLink := S.RLink;
+                  S.RLink := T.RLink;
+                  Q := S;
+                  --Delete T;
+               end if;
+            end if;
+         end if;
+         if DT = Root then
+            P.LLink := Q;
+         else
+            if DT = Left then
+               P.LLink := Q;
+            else
+               P.RLink := Q;
+            end if;
+         end if;
+      end DeleteRandomNode2;
+
+
+
+
+      procedure ReverseInOrder (
+            Start : in     BinarySearchTreePoint) is
+      begin
+         if Start = null then
+            return;
+         end if;
+         if Start.RTag = True and Start.RLink = Start then
+            if Start.LTag = True then
+               ReverseInOrder(Start.LLink);
+               return;
+            else
+               return;
+            end if;
+         end if;
+         if Start.RTag = True then
+            ReverseInOrder(Start.RLink);
+         end if;
+         Put("[");
+         Put(CustomerName(Start));
+         Put(",");
+         Put(CustomerPhone(Start));
+         Put_Line("]");
+         if Start.LTag = True then
+            ReverseInOrder(Start.LLink);
+         end if;
+      end ReverseInOrder;
+
+      procedure PreOrder (
+            TreePoint : in     BinarySearchTreePoint) is
+         P    : BinarySearchTreePoint;
+         Stop : BinarySearchTreePoint;
+      begin
+         P := TreePoint;
+         if TreePoint.RTag = True and TreePoint.RLink = TreePoint then
+            P := TreePoint.LLink;
+         end if;
+         Stop := P;
+         Put("[");
+         Put(CustomerName(P));
+         Put(",");
+         Put(CustomerPhone(P));
+         Put_Line("]");
+         loop
+            if P.LTag = True then
+               P := P.LLink;
+            else
+               while P.RTag = False loop
+                  P := P.RLink;
+               end loop;
+               if P.RLink = P then
+                  P := P.LLink;
+               else
+                  P := P.RLink;
+               end if;
+            end if;
+            exit when P = Stop;
+            Put("[");
+            Put(CustomerName(P));
+            Put(",");
+            Put(CustomerPhone(P));
+            Put_Line("]");
+         end loop;
+      end PreOrder;
+
+      --A
+      procedure PostOrderIterative (
+            TreePoint : in out BinarySearchTreePoint) is
+         P    : BinarySearchTreePoint;
+         Stop : BinarySearchTreePoint;
+         Top  : Integer;
+      begin
+         Top := TreeSize(TreePoint);
+         P := TreePoint;
+         if P.RTag = True and P.RLink = P then
+            P := P.LLink;
+         end if;
+         Stop := P;
+         declare
+            Stack : array (1 .. Top) of BinarySearchTreePoint;
+         begin
+            Top := 1;
+            Stack(Top) := P;
+            loop
+               if P.RTag = True then
+                  P := P.RLink;
+               else
+                  while P.LTag = False loop
+                     P := P.LLink;
+                  end loop;
+                  P := P.LLink;
+               end if;
+               exit when P = Stop;
+               Top := Top + 1;
+               Stack(Top) := P;
+            end loop;
+            while Top > 0 loop
+               Put("[");
+               Put(CustomerName(Stack(Top)));
+               Put(",");
+               Put(CustomerPhone(Stack(Top)));
+               Put_Line("]");
+               Top := Top - 1;
+            end loop;
+         end;
+      end PostOrderIterative;
+
+      procedure PostOrderRecursive (
+            TreePoint : in out BinarySearchTreePoint) is
+      begin
+         if TreePoint = null then
+            return;
+         end if;
+         if TreePoint.RTag = True and TreePoint.RLink = TreePoint then
+            if TreePoint.LTag = True then
+               PostOrderRecursive(TreePoint.LLink);
+               return;
+            else
+               return;
+            end if;
+         end if;
+         if TreePoint.LTag = True then
+            PostOrderRecursive(TreePoint.LLink);
+         end if;
+         if TreePoint.RTag = True then
+            PostOrderRecursive(TreePoint.RLink);
+         end if;
+         Put("[");
+         Put(CustomerName(TreePoint));
+         Put(",");
+         Put(CustomerPhone(TreePoint));
+         Put_Line("]");
+      end PostOrderRecursive;
+
+   end BinarySearchTree;
